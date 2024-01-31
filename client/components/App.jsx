@@ -1,23 +1,15 @@
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
+
 import React, { useEffect, useState } from "react";
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    fetch("/api/tasks")
-      .then((res) => res.json())
-      .then((tasks) => {
-        setTasks(tasks);
-      });
-  }, []);
-
   return (
     <main>
-      {tasks.map((task) => (
-        <span className="task" key={task.id}>
-          {task.description}
-        </span>
-      ))}
+      <Header />
+      <Content />
+      <Footer />
     </main>
   );
 };
