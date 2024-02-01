@@ -4,5 +4,5 @@
 
 
 .footer {
-    @apply border-teal-500;
+    @apply border border-sky-500;
 }
