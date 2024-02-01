@@ -21,3 +21,43 @@ body {
     }
   }
 }
+
+#content {
+  @apply flex;
+}
+
+#categories {
+  @apply bg-white;
+  @apply w-2/12;
+  @apply flex flex-wrap flex-col;
+  /* @apply flex-wrap;
+  @apply flex-col; */
+}
+
+.theWordCategories {
+  @apply bg-orange-400;
+}
+
+#categoriesList {
+  @apply bg-white;
+  @apply flex flex-wrap flex-col;
+  @apply border-solid border-2 border-black;
+}
+
+#categories1 {
+  @apply flex flex-wrap flex-col;
+  @apply divide-y divide-dashed;
+  @apply font-bold;
+}
+
+#categories2 {
+  @apply divide-y divide-dashed;
+  @apply font-bold;
+  @apply flex flex-wrap flex-col;
+}
+
+#item {
+  @apply w-1/3;
+}
+
+

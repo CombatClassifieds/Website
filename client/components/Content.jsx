@@ -1,10 +1,20 @@
 export default function Content() {
     return (
         <div id="content">
-            <img id="item" src="https://cdn11.bigcommerce.com/s-cyn7ecnpcb/images/stencil/608x608/products/2723/3064/6932__13776.1653424122.jpg?c=1"></img>
             <div id="categories">
                 <a className="theWordCategories">CATEGORIES</a>
-                <ul className="dropdowns">
+            
+            <div id="categoriesList">
+                <div id="categories1">
+                    <a className="first">OCS & Ranger School</a>
+                </div>
+                <div id="categories2">
+                    <a className="first">ROTC/JROTC Items</a>
+                </div>
+            </div>
+            </div>
+                <img id="item" src="https://cdn11.bigcommerce.com/s-cyn7ecnpcb/images/stencil/608x608/products/2723/3064/6932__13776.1653424122.jpg?c=1"></img>
+                {/* <ul className="dropdowns">
                     <li className="firstDropdown">
                         <a className="firstItem">OCS & Ranger School</a>
                         <div id="ocsRangerSchool">
@@ -519,7 +529,7 @@ export default function Content() {
                         </li>
                            
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 }
