@@ -1,23 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
+    @apply bg-teal-100;
 }
 
-.main {
-  padding: 8px;
-}
+.header {
+    @apply bg-teal-500 px-4 py-8;
 
-.task {
-  display: flex;
-  align-items: center;
-  border: 1px solid black;
-  padding: 2px;
-  max-width: 200px;
-}
+    & > h1 {
+        @apply text-xl font-bold;
+    }
 
-.task + .task {
-  margin-top: 4px;
-}
+    .search {
+        @apply w-full flex;
 
-.task > * + * {
-  margin-left: 4px;
+        & > input {
+            @apply grow;
+        }
+    }
 }
