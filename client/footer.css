@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .footer {
     @apply border border-sky-500;
+    @apply bg-gray-900;
+    @apply text-white;
+}
+
+.footer_contact_box {
+    @apply border border-white rounded-md;
+}
+
+.footer_image {
+    @apply border border-white rounded-md;
 }
