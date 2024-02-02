@@ -3,49 +3,47 @@
 @tailwind utilities;
 
 .footer {
-    @apply border border-sky-500;
-    @apply bg-gray-900;
-    @apply text-white;
-    @apply flex justify-between;
+  @apply border border-sky-500;
+  @apply bg-gray-900;
+  @apply text-white;
+  @apply flex justify-between;
 }
 
 .footer_contact_box {
-    @apply border border-white rounded-md;
-    margin: 10px;
+  @apply border border-white rounded-md;
+  margin: 10px;
 }
 
 .footer_image {
-    @apply border border-white rounded-md;
+  @apply border border-white rounded-md;
 }
 
 .FooterSiteNav {
-    @apply flex justify-between;
-    margin: 20px;
-    
-    ul {
-        list-style: none; 
-        padding: 0; 
-    }
-    
-    li {
-        @apply flex justify-center;
-        @apply mx-2;
-    }
+  @apply flex justify-between;
+  margin: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    @apply flex justify-center;
+    @apply mx-2;
+  }
 }
 
 .FooterHeader {
-    @apply text-yellow-500;
-    @apply font-bold;
-    @apply text-lg;
-    @apply mb-2;
+  @apply text-yellow-500;
+  @apply font-bold;
+  @apply text-lg;
+  @apply mb-2;
 }
 
 .FooterGuts {
-    @apply text-sm;
+  @apply text-sm;
 }
 
 .FooterGuts > * {
-    @apply mb-2; 
+  @apply mb-2;
 }
-
-
