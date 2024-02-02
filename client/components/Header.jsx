@@ -11,19 +11,19 @@ export default function Header() {
 function signIn() {
   return (
     <div className="signin">
-    <nav className="username">
-      <ul className="navlistsignincontainer">
-        <li>
-          <a href="#">Sign In</a>
-        </li>
-        <li>or</li>
-        <li>
-          <a href="#">Register</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  )
+      <nav className="username">
+        <ul className="navlistsignincontainer">
+          <li>
+            <a href="#">Sign In</a>
+          </li>
+          <li>or</li>
+          <li>
+            <a href="#">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 
 function search() {
@@ -37,7 +37,7 @@ function search() {
         <li>cart</li>
       </ul>
     </div>
-  )
+  );
 }
 
 // function imporovedSearchBar {
@@ -48,20 +48,19 @@ function search() {
 //   )
 // }
 
-
 function navigate() {
   return (
     <div className="navigate">
-        <nav className="navBar">
-          <ul className="navlistcontainer">
-            <li className="navItem">Contact Us</li>
-            <li className="navItem">Locations</li>
-            <li className="navItem">Shipping, Returns, & Terms</li>
-            <li className="navItem">About Us</li>
-            <li className="navItem">Size Charts</li>
-            <li className="navItem">Accessibility</li>
-          </ul>
-        </nav>
-      </div>
-  )
+      <nav className="navBar">
+        <ul className="navlistcontainer">
+          <li className="navItem">Contact Us</li>
+          <li className="navItem">Locations</li>
+          <li className="navItem">Shipping, Returns, & Terms</li>
+          <li className="navItem">About Us</li>
+          <li className="navItem">Size Charts</li>
+          <li className="navItem">Accessibility</li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
