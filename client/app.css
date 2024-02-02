@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 body {
-    @apply bg-teal-100;
+  @apply bg-teal-100;
 }
 
 .header {
-    @apply bg-teal-500 px-4 py-8;
+  @apply bg-teal-500 px-4 py-8;
 
-    & > h1 {
-        @apply text-xl font-bold;
+  & > h1 {
+    @apply text-xl font-bold;
+  }
+
+  .search {
+    @apply w-full flex;
+
+    & > input {
+      @apply grow;
     }
-
-    .search {
-        @apply w-full flex;
-
-        & > input {
-            @apply grow;
-        }
-    }
+  }
 }
