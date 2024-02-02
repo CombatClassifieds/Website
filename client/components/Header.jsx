@@ -15,7 +15,7 @@ export default function Header() {
         </nav>
       </div>
       <div className="search">
-        <img src="/images/logo.jpeg" />
+        <img src="./images/logo.jpeg" />
         <h1>Combat Classifieds</h1>
         <input type="search" />
         <button>Search</button>
