@@ -9,6 +9,9 @@ export default {
     proxy: {
       "/api": `http://localhost:${process.env.PORT}`,
     },
+    watch: {
+      usePolling: true,
+    },
   },
   cacheDir: "../node_modules/.vite",
   base: "./",
