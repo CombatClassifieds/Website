@@ -7,17 +7,41 @@ body {
 }
 
 .header {
-    @apply bg-teal-500 px-4 py-8;
+    @apply bg-teal-500;
 
     & > h1 {
         @apply text-xl font-bold;
     }
 
-    .search {
-        @apply w-full flex;
+    .navlistsignincontainer {
+        @apply flex;
+        @apply flex-wrap;
+        @apply flex-row;
+        @apply justify-end;
+        @apply space-x-2;
+        @apply mb-8;
+    }
 
-        & > input {
-            @apply grow;
-        }
+    .search {
+        @apply flex-wrap;
+        @apply flex;
+        @apply flex-row;
+        @apply justify-center;
+        @apply space-x-2;
+    }
+    .navlistcheckout {
+        @apply flex-wrap;
+        @apply flex;
+        @apply flex-row;
+        @apply space-x-4;
+    }
+
+    .navlistcontainer {
+        @apply flex-wrap;
+        @apply flex;
+        @apply flex-row;
+        @apply justify-center;
+        @apply justify-around;
+        @apply mt-4;
     }
 }
