@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["REDACTED"]
   pull_request:
-    branches: ["main"]
+    branches: ["REDACTED"]
 
 jobs:
   build:
@@ -26,6 +26,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: npm run build --workspace=client
+      - run: npm run build --workspace=client && rm -rf client/dist/
       # - run: npm test
       - run: npm run lint
