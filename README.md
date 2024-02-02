@@ -26,20 +26,35 @@ There are a few ways you can use tailwind, but the most productive workflow invo
 [tailwind rules](https://tailwindcss.com/docs/font-weight).
 
 ### Useful Colors
-Footer BG
-  - bg-gray-900
 
-Yellow text
-- text-yellow-500
+The palette that tailwind provides can be found [here](https://tailwindcss.com/docs/customizing-colors).
+
+#### Footer BG
+
+- `bg-gray-900`
+
+#### Yellow text
+
+- `text-yellow-500`
 
 ## Using LINT
 
-To view files needed to be prettier
-```npm run lint```
+To view files that fail the lint, you can run this:
 
-To pretty
-```npx prettier --write .```
+```bash
+npm run lint
+```
 
+> **Note**, it will be run for every pull request and commit in the `REDACTED` branch.
+
+To automatically prettify your code, run:
+
+```bash
+npx prettier --write .
+```
+
+> **Warning**, this may break your code! Please make sure you commit before prettifying
+> so you can roll-back in case anything breaks.
 
 ## Backend
 
