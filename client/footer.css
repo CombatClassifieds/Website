@@ -16,6 +16,7 @@
 
 .footer_image {
   @apply border border-white rounded-md;
+  @apply max-w-12 max-h-12;
 }
 
 .FooterSiteNav {
