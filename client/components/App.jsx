@@ -2,7 +2,7 @@ import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
   return (
