@@ -11,9 +11,9 @@ export default function Footer() {
 
 function FooterContactInfo() {
   return (
-    <div class="footer_contact_box">
+    <div className="footer_contact_box">
       <div className="footer_image">
-        <img src="./images/LOGO.jpeg" />
+        <img src="./images/logo.jpeg" />
       </div>
       <ul>
         <li>
