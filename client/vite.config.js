@@ -10,8 +10,8 @@ export default {
       "/api": `http://localhost:${process.env.PORT}`,
     },
     watch: {
-      usePolling: true
-    }
+      usePolling: true,
+    },
   },
   cacheDir: "../node_modules/.vite",
   base: "./",

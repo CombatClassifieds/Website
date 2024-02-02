@@ -7,28 +7,27 @@ body {
 }
 
 .header {
-    @apply bg-teal-500;
+  @apply bg-teal-500;
 
-    & > h1 {
-        @apply text-xl font-bold;
-    }
+  & > h1 {
+    @apply text-xl font-bold;
+  }
 
-    .navlistsignincontainer {
-        @apply flex flex-wrap flex-row justify-end;
-        @apply space-x-2 mb-8;
-    }
+  .navlistsignincontainer {
+    @apply flex flex-wrap flex-row justify-end;
+    @apply space-x-2 mb-8;
+  }
 
-    .search {
-        @apply flex-wrap flex flex-row justify-center;
-        @apply space-x-2;
-    }
-    .navlistcheckout {
-        @apply flex-wrap flex flex-row space-x-4;
-    }
+  .search {
+    @apply flex-wrap flex flex-row justify-center;
+    @apply space-x-2;
+  }
+  .navlistcheckout {
+    @apply flex-wrap flex flex-row space-x-4;
+  }
 
-    .navlistcontainer {
-        @apply flex-wrap flex flex-row justify-center;
-        @apply justify-around mt-4;
-    }
+  .navlistcontainer {
+    @apply flex-wrap flex flex-row justify-center;
+    @apply justify-around mt-4;
   }
 }
