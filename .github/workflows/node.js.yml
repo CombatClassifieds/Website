@@ -62,7 +62,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: vite-client
-      - run: ls -lah
+      - run: ls -lah client
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
