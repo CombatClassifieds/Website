@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="footer">
-      {FooterContactInfo()}
-      {FooterSiteNav()}
+      <FooterContactInfo />
+      <FooterSiteNav />
     </footer>
   );
 }
@@ -30,9 +30,9 @@ function FooterContactInfo() {
 function FooterSiteNav() {
   return (
     <div className="FooterSiteNav">
-      {Navigate()}
-      {Categories()}
-      {Popular_Brands()}
+      <Navigate />
+      <Categories />
+      <Popular_Brands />
     </div>
   );
 }

@@ -1,14 +1,14 @@
 export default function Header() {
   return (
     <header className="header">
-      {signIn()}
-      {search()}
-      {navigate()}
+      <SignIn />
+      <Search />
+      <Navigate />
     </header>
   );
 }
 
-function signIn() {
+function SignIn() {
   return (
     <div className="signin">
       <nav className="username">
@@ -26,7 +26,7 @@ function signIn() {
   );
 }
 
-function search() {
+function Search() {
   return (
     <div className="search">
       <img src="./images/logo.png" />
@@ -48,7 +48,7 @@ function search() {
 //   )
 // }
 
-function navigate() {
+function Navigate() {
   return (
     <div className="navigate">
       <nav className="navBar">
