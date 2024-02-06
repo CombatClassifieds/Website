@@ -12,9 +12,8 @@
   @apply flex flex-col items-center;
   @apply justify-center ps-24;
 
-
   li {
-    @apply text-center
+    @apply text-center;
   }
 }
 
