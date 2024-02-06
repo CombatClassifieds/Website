@@ -1,6 +1,5 @@
 import Header from "./Header";
-import AccordianMenu from "./AccordianMenu";
-import ItemDetails from "./ItemDetails";
+import Content from "./Content";
 import Footer from "./Footer";
 
 import React from "react";
@@ -9,8 +8,7 @@ const App = () => {
   return (
     <main>
       <Header />
-      <AccordianMenu />
-      <ItemDetails />
+      <Content />
       <Footer />
     </main>
   );
