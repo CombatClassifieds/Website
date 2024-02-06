@@ -11,8 +11,6 @@ export default function Footer() {
   );
 }
 
-//justify-content center
-
 function FooterContactInfo() {
   return (
     <div className="footer_contact_box">

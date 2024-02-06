@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.itemdetails {
+  @apply border border-sky-500;
+}

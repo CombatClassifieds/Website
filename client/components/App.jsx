@@ -1,14 +1,16 @@
 import Header from "./Header";
-import Content from "./Content";
+import AccordianMenu from "./AccordianMenu";
+import ItemDetails from "./ItemDetails";
 import Footer from "./Footer";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const App = () => {
   return (
     <main>
       <Header />
-      <Content />
+      <AccordianMenu />
+      <ItemDetails />
       <Footer />
     </main>
   );

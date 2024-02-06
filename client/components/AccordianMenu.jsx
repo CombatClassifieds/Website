@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Content() {
+export default function AccordianMenu() {
   let categoryItems = [
     "OCS & Ranger School",
     "ROTC/JROTC Items",
@@ -154,12 +154,6 @@ export default function Content() {
           </div>
         </div>
       </div>
-
-      <img
-        id="item"
-        src="https://cdn11.bigcommerce.com/s-cyn7ecnpcb/images/stencil/608x608/products/2723/3064/6932__13776.1653424122.jpg?c=1"
-        alt="Your Item"
-      />
     </div>
   );
 }
