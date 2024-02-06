@@ -7,18 +7,38 @@ body {
 }
 
 .header {
-  @apply bg-teal-500 px-4 py-8;
+  @apply bg-gray-900 text-white;
 
   & > h1 {
     @apply text-xl font-bold;
   }
 
-  .search {
-    @apply w-full flex;
+  .navlistsignincontainer {
+    @apply flex flex-wrap flex-row justify-end;
+    @apply space-x-2 pr-4 py-2;
 
-    & > input {
-      @apply grow;
+    a {
+      @apply font-bold;
     }
+  }
+  .search {
+    @apply flex-wrap flex flex-row justify-center items-center;
+    @apply space-x-2;
+
+    img {
+      @apply max-w-28 max-h-28 mr-24;
+    }
+  }
+
+  .navlistcheckout {
+    @apply flex-wrap flex flex-row space-x-4;
+  }
+  .navigate {
+    @apply mb-4 pb-1.5;
+  }
+  .navlistcontainer {
+    @apply flex-wrap flex flex-row justify-center;
+    @apply justify-around mt-4 mb-4;
   }
 }
 
