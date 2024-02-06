@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
@@ -9,6 +11,8 @@ export default function Footer() {
   );
 }
 
+//justify-content center
+
 function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
@@ -17,10 +21,13 @@ function FooterContactInfo() {
       </div>
       <ul>
         <li>
-          <address> Address: REDACTED ADDRESS </address>
+          <address>
+            <FontAwesomeIcon icon={faLocationDot} />
+            REDACTED ADDRESS
+          </address>
         </li>
         <li>
-          <p> Phone: (RER) EDAC - TED? </p>
+          <p> (RER) EDAC - TED? </p>
         </li>
       </ul>
     </div>

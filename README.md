@@ -56,6 +56,23 @@ npx prettier --write .
 > **Warning**, this may break your code! Please make sure you commit before prettifying
 > so you can roll-back in case anything breaks.
 
+### Font Awesome
+
+We use [FontAwesome](https://fontawesome.com) for the icons. To look up an icon you can use, try the
+[search system](https://fontawesome.com/search). When using one of the icons, import it as
+a react component:
+
+```jsx
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+// ... then somewhere in your code ...
+
+function Foo() {
+  return <FontAwesomeIcon icon={faLocationDot} />;
+}
+```
+
 ## Backend
 
 > TODO
