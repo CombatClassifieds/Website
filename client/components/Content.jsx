@@ -4,6 +4,7 @@ export default function Content() {
     let popularBrands = ['Propper', 'CamelBak', 'Tru Spec', 'Rite in the Rain', 'Benchmade', 'Oakley', 'Raine', 'Sua Sponte', 'Gerber', 'Tasmanian Tiger', 'View All'];  
     return (
     <div id="content">
+        <div id="categoriesAndBrands">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
         
@@ -14,13 +15,14 @@ export default function Content() {
         </div>
       </div>
       <div id="popularBrands">
-        <a className="theWordCategories">POPULAR BRANDS</a>
+        <a className="popularBrands">POPULAR BRANDS</a>
         
-        <div id="categoriesList">
+        <div id="brandsList">
             {popularBrands.map((brand) => (
                 <a className={brand}>{brand}</a>
             ))}
         </div>
+      </div>
       </div>
       <img
         id="item"
