@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="footer">
-      {FooterContactInfo()}
-      {FooterSiteNav()}
+      <FooterContactInfo />
+      <FooterSiteNav />
     </footer>
   );
 }
@@ -13,14 +13,14 @@ function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
       <div className="footer_image">
-        <img src="./images/logo.jpeg" />
+        <img src="./images/logo.png" />
       </div>
       <ul>
         <li>
           <address> Address: REDACTED ADDRESS </address>
         </li>
         <li>
-          <phone> Phone: (RER) EDAC - TED? </phone>
+          <p> Phone: (RER) EDAC - TED? </p>
         </li>
       </ul>
     </div>
@@ -30,9 +30,9 @@ function FooterContactInfo() {
 function FooterSiteNav() {
   return (
     <div className="FooterSiteNav">
-      {Navigate()}
-      {Categories()}
-      {Popular_Brands()}
+      <Navigate />
+      <Categories />
+      <Popular_Brands />
     </div>
   );
 }
