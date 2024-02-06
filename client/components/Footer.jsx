@@ -3,17 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
-    let videoRef = useRef();
-    useEffect(() => {
-        if (videoRef.current.paused) {
-            videoRef.current.play();
-        }
-    });
+  let videoRef = useRef();
+  useEffect(() => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    }
+  });
   return (
     <footer className="footer">
-        <video autoplay muted loop ref={videoRef}>
-            <source src="./videos/motivation.mp4" type="video/mp4" />
-        </video>
+      <video autoplay muted loop ref={videoRef}>
+        <source src="./videos/motivation.mp4" type="video/mp4" />
+      </video>
       <div className="content">
         <FooterContactInfo />
         <FooterSiteNav />
