@@ -84,6 +84,102 @@ export default function Content() {
     "Tabs",
   ];
   let eyewear = ["All Eyewear", "Accessories", "Glasses", "Goggles", "Rx"];
+  let fieldEquipment = [
+    "All Field Equipment",
+    "ALICE< MOLLE GEAR",
+    "Bags, Packs, Cases",
+    "Emergency Preparedness",
+    "Essential Emergency Items",
+    "Field Gear",
+    "Field Supplies",
+    "First Aid",
+    "Hydration",
+    "Navigation",
+    "Notebooks Cards",
+    "Rappelling",
+    "Sleeping",
+    "Survival",
+    "Wallets/ID Holders",
+  ];
+  let flashlights = [
+    "All Flashlights",
+    "Accessories",
+    "Chemlights",
+    "Headlamps",
+    "LED",
+  ];
+  let footwearAndAccessories = [
+    "All Footwear & Accessories",
+    "Boot Accessories",
+    "AR670-1 Compliant",
+    "Boot Care",
+    "Boots",
+    "Foot Care",
+    "Insoles",
+    "Socks",
+    "Shoes",
+  ];
+  let gifts = [
+    "All Gifts, Novelty, Books/Manuals",
+    "Books/Manuals",
+    "Clothing & Hats",
+    "Coins",
+    "Decals, Stickers",
+    "Flags",
+    "Games, Toys",
+    "Magnets",
+    "Gift Cards",
+    "Jewelry",
+    "Key Rings",
+    "KIA, POW",
+    "Morale Patches & Lugage Tags",
+    "Mugs",
+    "Ornaments",
+    "Watches",
+  ];
+  let headwear = [
+    "All Headwear",
+    "Balaclavas, Hoods, Masks",
+    "Berets",
+    "Boonie Hats",
+    "Campaign Hats and Accessories",
+    "Hat Accessories",
+    "Helmets and Accessories",
+    "Novelty",
+    "Patrol Caps",
+    "Veils, Scarves",
+    "Watch Caps, Beenies",
+  ];
+  let knivesAndTools = [
+    "All Knives & Tools",
+    "Fixed Blades",
+    "Folding Knives",
+    "Machetes",
+    "Sharpeners & Acc",
+    "Sheaths",
+    "Tools",
+  ];
+  let tacticalGear = [
+    "All Tactical Gear",
+    "Bags, Packs",
+    "Duty Gear",
+    "Ghillie Suits/Camo Acc",
+    "Holsters, Duty Gear",
+    "Optics",
+    "Protective Gear, Restraints",
+    "Vests",
+  ];
+  let weaponsAccessories = [
+    "All WEapons Accessories",
+    "Bipods",
+    "Cleaning Kits & Accessories",
+    "Grips",
+    "Holsters",
+    "Lanyards",
+    "Magazines & Accessories",
+    "Slings",
+    "Weapons Accessories",
+  ];
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -135,6 +231,68 @@ export default function Content() {
                         </button>
                       ))}
                     {/* Render 'Eyewear' items */}
+                    {category === "Eyewear" &&
+                      eyewear.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/* Render 'Field Equipment items */}
+                    {category === "Field Equipment" &&
+                      fieldEquipment.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/* Render 'Flashlights' items*/}
+                    {category === "Flashlights" &&
+                      flashlights.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/* Render 'Footwear & Accessories' items*/}
+                    {category === "Footwear & Accessories" &&
+                      footwearAndAccessories.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/*Render 'Gifts, Novelty, Books/Manuals' items*/}
+                    {category === "Gifts, Novelty, Books/Manuals" &&
+                      gifts.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/*Render 'Headwear' items*/}
+                    {category === "Headwear" &&
+                      headwear.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/*Render 'Knives & Tools*/}
+                    {category === "Knives & Tools" &&
+                      knivesAndTools.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/*Render 'Tactical Gear' items*/}
+                    {category === "Tactical Gear" &&
+                      tacticalGear.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
+                    {/*Render 'Weapons Accessories' items*/}
+                    {category === "Weapons Accessories" &&
+                      weaponsAccessories.map((item) => (
+                        <button className="accordionItem" key={item}>
+                          {item}
+                        </button>
+                      ))}
                   </div>
                 )}
               </div>
