@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#itemDetails {
+  @apply w-full flex;
+
+  img {
+    @apply flex max-w-96 max-h-96 ml-56 mt-12;
+  }
+}
+
+#itemSpecs {
+  @apply border max-w-96 max-h-96;
+}
