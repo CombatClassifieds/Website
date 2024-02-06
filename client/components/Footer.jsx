@@ -9,6 +9,8 @@ export default function Footer() {
   );
 }
 
+//justify-content center
+
 function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
@@ -17,10 +19,10 @@ function FooterContactInfo() {
       </div>
       <ul>
         <li>
-          <address> Address: REDACTED ADDRESS </address>
+          <address> REDACTED ADDRESS </address>
         </li>
         <li>
-          <p> Phone: (RER) EDAC - TED? </p>
+          <p> (RER) EDAC - TED? </p>
         </li>
       </ul>
     </div>

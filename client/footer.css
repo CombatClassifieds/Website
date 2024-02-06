@@ -3,20 +3,23 @@
 @tailwind utilities;
 
 .footer {
-  @apply border border-sky-500;
   @apply bg-gray-900;
   @apply text-white;
   @apply flex justify-between;
 }
 
 .footer_contact_box {
-  @apply border border-white rounded-md;
-  margin: 10px;
+  @apply flex flex-col items-center;
+  @apply justify-center ps-24;
+
+
+  li {
+    @apply text-center
+  }
 }
 
 .footer_image {
-  @apply border border-white rounded-md;
-  @apply max-w-12 max-h-12;
+  @apply max-w-28 max-h-28 mx-auto;
 }
 
 .FooterSiteNav {
