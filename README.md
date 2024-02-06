@@ -63,18 +63,15 @@ We use [FontAwesome](https://fontawesome.com) for the icons. To look up an icon 
 a react component:
 
 ```jsx
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 // ... then somewhere in your code ...
 
 function Foo() {
-  return (
-    <FontAwesomeIcon icon={faLocationDot} />
-  );
+  return <FontAwesomeIcon icon={faLocationDot} />;
 }
 ```
-
 
 ## Backend
 
