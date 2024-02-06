@@ -1,16 +1,25 @@
 export default function Content() {
-  return (
+
+    let categoryItems = ['OCS & Ranger School', 'ROTC/JROTC Items', 'Clothing', 'Uniform Accessories', 'Crests', 'Eyewear', 'Field Equipment', 'Flashlights', 'Footwear & Accessories', 'Gifts, Novelty, Books/Manuals', 'Headwear', 'Knives & Tools', 'New Arrivals', 'Tactical Gear', 'Weapons Accessories', 'Clearance'];
+    let popularBrands = ['Propper', 'CamelBak', 'Tru Spec', 'Rite in the Rain', 'Benchmade', 'Oakley', 'Raine', 'Sua Sponte', 'Gerber', 'Tasmanian Tiger', 'View All'];  
+    return (
     <div id="content">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
-
+        
         <div id="categoriesList">
-          <div id="categories1">
-            <a className="first">OCS & Ranger School</a>
-          </div>
-          <div id="categories2">
-            <a className="first">ROTC/JROTC Items</a>
-          </div>
+            {categoryItems.map((category) => (
+                <a className={category}>{category}</a>
+            ))}
+        </div>
+      </div>
+      <div id="popularBrands">
+        <a className="theWordCategories">POPULAR BRANDS</a>
+        
+        <div id="categoriesList">
+            {popularBrands.map((brand) => (
+                <a className={brand}>{brand}</a>
+            ))}
         </div>
       </div>
       <img
