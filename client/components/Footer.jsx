@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
+  let videoRef = useRef();
+  useEffect(() => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    }
+  });
   return (
     <footer className="footer">
-      <FooterContactInfo />
-      <FooterSiteNav />
+      <video autoplay muted loop ref={videoRef}>
+        <source src="./videos/motivation.mp4" type="video/mp4" />
+      </video>
+      <div className="content">
+        <FooterContactInfo />
+        <FooterSiteNav />
+      </div>
     </footer>
   );
 }
-
-//justify-content center
 
 function FooterContactInfo() {
   return (
