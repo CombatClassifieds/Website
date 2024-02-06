@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 export default function Content() {
   return (
-    <div id="content">
-      <ItemDetails />
+    <div class="flex">
       <AccordianMenu />
+      <ItemDetails />
     </div>
   );
 }
@@ -14,6 +14,9 @@ function ItemDetails() {
     <>
       <div id="itemDetails">
         <img src="./images/lego_secret_tank.jpeg"/>
+        <div id='itemSpecs'>
+          THIS IS WORDS
+        </div>
       </div>
     </>
   )

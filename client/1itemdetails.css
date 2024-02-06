@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.itemDetails {
+#itemDetails {
+
+  @apply w-full flex;
+
   img {
-    /* @apply max-w-11 max-h-11; */
+    @apply flex max-w-96 max-h-96 ml-56 mt-12;
   }
+}
+
+#itemSpecs {
+  @apply border max-w-96 max-h-96;
 }
