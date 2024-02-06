@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 
 export default function Content() {
-
   return (
-    <>
+    <div id="content">
       <ItemDetails />
       <AccordianMenu />
-    </>
+    </div>
   );
 }
 
 function ItemDetails() {
   return (
-    <></>
+    <>
+      <div id="itemDetails">
+        <img src="./images/lego_secret_tank.jpeg"/>
+      </div>
+    </>
   )
 }
 
@@ -25,7 +28,7 @@ function AccordianMenu() {
   };
 
   return (
-    <div id="content">
+    
     <div id="categoriesAndBrands">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
@@ -87,7 +90,7 @@ function AccordianMenu() {
         </div>
       </div>
     </div>
-  </div>
+  
   )
 }
 let categoryItems = [
