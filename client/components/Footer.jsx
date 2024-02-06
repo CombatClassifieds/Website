@@ -11,6 +11,8 @@ export default function Footer() {
   );
 }
 
+//justify-content center
+
 function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
@@ -21,11 +23,11 @@ function FooterContactInfo() {
         <li>
           <address>
             <FontAwesomeIcon icon={faLocationDot} />
-            Address: REDACTED ADDRESS
+            REDACTED ADDRESS
           </address>
         </li>
         <li>
-          <p> Phone: (RER) EDAC - TED? </p>
+          <p> (RER) EDAC - TED? </p>
         </li>
       </ul>
     </div>
