@@ -48,7 +48,7 @@ body {
 
 #categories {
   @apply bg-white;
-  @apply w-2/12;
+  @apply w-3/12;
   @apply flex flex-wrap flex-col;
 }
 
@@ -63,7 +63,7 @@ body {
 #popularBrands {
   @apply my-8;
   @apply bg-white;
-  @apply w-2/12;
+  @apply w-3/12;
   @apply flex flex-wrap flex-col;
   @apply border-solid border-2 border-black;
 }

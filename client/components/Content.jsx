@@ -2,6 +2,14 @@ export default function Content() {
 
     let categoryItems = ['OCS & Ranger School', 'ROTC/JROTC Items', 'Clothing', 'Uniform Accessories', 'Crests', 'Eyewear', 'Field Equipment', 'Flashlights', 'Footwear & Accessories', 'Gifts, Novelty, Books/Manuals', 'Headwear', 'Knives & Tools', 'New Arrivals', 'Tactical Gear', 'Weapons Accessories', 'Clearance'];
     let popularBrands = ['Propper', 'CamelBak', 'Tru Spec', 'Rite in the Rain', 'Benchmade', 'Oakley', 'Raine', 'Sua Sponte', 'Gerber', 'Tasmanian Tiger', 'View All'];  
+    let ocsRangerSchoolItems = ['All OCS & Ranger School', 'OCS - Click Here', 'Ranger School - Click Here'];
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    
+    const handleAccordionClick = (category) => {
+        setSelectedCategory(category);
+      };
+
+
     return (
     <div id="content">
         <div id="categoriesAndBrands">
@@ -10,8 +18,7 @@ export default function Content() {
         
         <div id="categoriesList">
             {categoryItems.map((category) => (
-                <a className={category}>{category}</a>
-            ))}
+                <button className="accordian" key={category}>{category}</button>))}
         </div>
       </div>
       <div id="popularBrands">
@@ -19,7 +26,7 @@ export default function Content() {
         
         <div id="brandsList">
             {popularBrands.map((brand) => (
-                <a className={brand}>{brand}</a>
+                <button className={brand}key={brand}>{brand}</button>
             ))}
         </div>
       </div>
