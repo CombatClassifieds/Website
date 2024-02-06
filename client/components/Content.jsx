@@ -203,6 +203,10 @@ export default function Content() {
                   onClick={() => handleAccordionClick(category)}
                 >
                   {category}
+                  {/* Render special symbol for accordion items */}
+                  {category === "OCS & Ranger School" || category === "Clothing" || category === "Uniform Accessories" || category === "Eyewear" || category === "Field Equipment" || category === "Flashlights" || category === "Footwear & Accessories" || category === "Gifts, Novelty, Books/Manuals" || category === "Headweawr" || category === "Knives & Tools" || category === "Tactical Gear" || category === "Weapons Accessories" ? (
+                    <span className="accordionSymbol">^</span>
+                  ) : null}
                 </button>
 
                 {/* Render accordion items based on selected category */}
