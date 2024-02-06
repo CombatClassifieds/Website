@@ -3,9 +3,17 @@
 @tailwind utilities;
 
 .footer {
-  @apply bg-gray-900;
-  @apply text-white;
-  @apply flex justify-between;
+    @apply relative overflow-hidden pt-4;
+    aspect-ratio: 16/4;
+
+    & > .content {
+        @apply text-white flex justify-between relative z-10;
+    }
+
+    & > video {
+        @apply absolute w-full;
+        top: -50%
+    }
 }
 
 .footer_contact_box {
