@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 #itemDetails {
-
   @apply w-full flex;
 
   img {

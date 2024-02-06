@@ -13,17 +13,14 @@ function ItemDetails() {
   return (
     <>
       <div id="itemDetails">
-        <img src="./images/lego_secret_tank.jpeg"/>
-        <div id='itemSpecs'>
-          THIS IS WORDS
-        </div>
+        <img src="./images/lego_secret_tank.jpeg" />
+        <div id="itemSpecs">THIS IS WORDS</div>
       </div>
     </>
-  )
+  );
 }
 
 function AccordianMenu() {
-
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleAccordionClick = (category) => {
@@ -31,7 +28,6 @@ function AccordianMenu() {
   };
 
   return (
-    
     <div id="categoriesAndBrands">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
@@ -93,8 +89,7 @@ function AccordianMenu() {
         </div>
       </div>
     </div>
-  
-  )
+  );
 }
 let categoryItems = [
   "OCS & Ranger School",
