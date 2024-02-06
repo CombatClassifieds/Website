@@ -43,19 +43,46 @@ body {
 }
 
 #content {
-  @apply flex;
+  @apply flex flex-wrap flex-col;
+}
+
+.accordionItem {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
 }
 
 #categories {
   @apply bg-white;
-  @apply w-2/12;
+  @apply w-3/12;
   @apply flex flex-wrap flex-col;
-  /* @apply flex-wrap;
-  @apply flex-col; */
 }
 
 .theWordCategories {
   @apply bg-orange-400;
+}
+
+.popularBrands {
+  @apply bg-orange-400;
+}
+
+#popularBrands {
+  @apply my-8;
+  @apply bg-white;
+  @apply w-3/12;
+  @apply flex flex-wrap flex-col;
+  @apply border-solid border-2 border-black;
 }
 
 #categoriesList {
@@ -64,18 +91,12 @@ body {
   @apply border-solid border-2 border-black;
 }
 
-#categories1 {
-  @apply flex flex-wrap flex-col;
-  @apply divide-y divide-dashed;
-  @apply font-bold;
-}
-
-#categories2 {
-  @apply divide-y divide-dashed;
-  @apply font-bold;
+#brandsList {
+  @apply bg-white;
   @apply flex flex-wrap flex-col;
 }
 
 #item {
   @apply w-1/3;
+  @apply flex items-center justify-center;
 }
