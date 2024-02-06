@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
   return (
@@ -17,7 +19,10 @@ function FooterContactInfo() {
       </div>
       <ul>
         <li>
-          <address> Address: REDACTED ADDRESS </address>
+          <address>
+            <FontAwesomeIcon icon={faLocationDot} />
+            Address: REDACTED ADDRESS
+          </address>
         </li>
         <li>
           <p> Phone: (RER) EDAC - TED? </p>

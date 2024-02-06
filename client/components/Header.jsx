@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faSearch, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+
 export default function Header() {
   return (
     <header className="header">
@@ -14,6 +18,7 @@ function SignIn() {
       <nav className="username">
         <ul className="navlistsignincontainer">
           <li>
+            <FontAwesomeIcon icon={faUser} />
             <a href="#">Sign In</a>
           </li>
           <li>or</li>
@@ -31,10 +36,18 @@ function Search() {
     <div className="search">
       <img src="./images/logo.png" />
       <input type="search" />
-      <button>Search</button>
+      <button>
+        <FontAwesomeIcon icon={faSearch} />
+      </button>
       <ul className="navlistcheckout">
-        <li>wishlist</li>
-        <li>cart</li>
+        <li>
+          <FontAwesomeIcon icon={faHeart} />
+          wishlist
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faCartShopping} />
+          cart
+        </li>
       </ul>
     </div>
   );
