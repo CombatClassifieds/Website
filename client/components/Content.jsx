@@ -89,7 +89,7 @@ function AccordianMenu() {
 function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
-      <div>
+      <div className="children">
         {category.children.map((item) => (
           <SubCategory item={item} />
         ))}
@@ -114,7 +114,7 @@ function Category({ category, currentlySelected, onClick }) {
 
 function SubCategory({ item }) {
   return (
-    <button key={item}>
+    <button key={item} className="accordion">
       {item}
     </button>
   );

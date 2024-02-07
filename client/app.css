@@ -53,8 +53,11 @@
 
 #accordianMenu {
   @apply pl-3;
+  .children > button {
+      @apply ml-4;
+  }
   .accordion {
-    width: 100%;
+      @apply w-full block;
     padding-right: 1em;
 
     &.has-children {
@@ -107,6 +110,6 @@ button {
   @apply flex items-center justify-center;
 }
 
-.brand {
+.brand, .accordion {
   @apply hover:text-yellow-500
 }
