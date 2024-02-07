@@ -22,7 +22,11 @@
 
   & > .black-bar {
     font-family: "Bootcamp";
-    @apply bg-slate-950 z-10 h-full w-full relative text-white text-center p-6 mt-8 text-2xl;
+    @apply z-10 h-full w-full relative text-white text-center p-6 mt-16 text-4xl;
+    /* @apply flex justify-center items-center; */
+    & > div {
+        @apply bg-slate-950 w-fit h-fit m-auto p-8;
+    }
   }
 }
 
