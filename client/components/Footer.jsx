@@ -18,6 +18,7 @@ export default function Footer() {
         <FooterContactInfo />
         <FooterSiteNav />
       </div>
+        <BlackBar />
     </footer>
   );
 }
@@ -100,6 +101,14 @@ function Popular_Brands() {
       </div>
     </ul>
   );
+}
+
+function BlackBar() {
+    return (
+        <div className="black-bar">
+          "REDACTED"
+        </div>
+    );
 }
 
 const navigationLinks = [
