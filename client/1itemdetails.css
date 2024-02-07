@@ -12,7 +12,7 @@
 }
 
 #itemSpecs {
-  @apply pl-6 pt-6 pr-6 pb-6 ml-24 mt-24 mb-56;
+  @apply pl-6 pt-6 pr-6 pb-6 ml-24 mt-24 h-fit;
   @apply flex flex-col items-center;
   @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
 }
