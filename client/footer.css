@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .footer {
-  @apply relative overflow-hidden pt-4;
+  @apply relative overflow-hidden pt-4 absolute bottom-0 left-0 right-0;
   aspect-ratio: 16/4;
 
   & > .content {

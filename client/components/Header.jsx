@@ -39,7 +39,7 @@ function Search() {
   return (
     <div className="search">
       <img src="./images/logo.png" />
-      <input type="search" />
+      <input type="text" />
       <button>
         <FontAwesomeIcon icon={faSearch} />
       </button>

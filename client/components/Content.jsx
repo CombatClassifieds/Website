@@ -4,9 +4,24 @@ import { faCartPlus, faBitcoinSign } from "@fortawesome/free-solid-svg-icons";
 
 export default function Content() {
   return (
-    <div className="flex">
+    <div className="flex min-h-fit">
       <AccordianMenu />
-      <ItemDetails />
+      <div className = 'flex-col' id="mainContent"> 
+        <ItemDetails />
+        <div>
+        <SideScroll />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SideScroll() {
+  return (
+    <div id="relatedProducts">
+      <img src="./images/futuristic_secret_tank.jpeg"/>
+      <img src="./images/glasses.jpeg"/>
+      <img src="./images/secret_weapon.jpeg"/>
     </div>
   );
 }
@@ -90,7 +105,6 @@ function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
       <div>
-        {/* Render 'OCS & Ranger School' items */}
         {category.children.map((item) => (
           <SubCategory item={item} />
         ))}
@@ -108,8 +122,6 @@ function Category({ category, currentlySelected, onClick }) {
       <button className={classes.join(" ")} onClick={onClick}>
         {typeof category === "string" ? category : category.name}
       </button>
-
-      {/* Render accordion items based on selected category */}
       {children}
     </div>
   );
