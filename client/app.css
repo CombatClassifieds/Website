@@ -6,6 +6,8 @@ body {
   @apply bg-teal-100;
 }
 
+/*/////////////////////////// {Header} ////////////////////////////*/
+
 .header {
   @apply bg-gray-900 text-white;
 
@@ -28,10 +30,17 @@ body {
     img {
       @apply max-w-28 max-h-28 mr-24;
     }
+    input {
+      @apply max-w-60;
+    }
   }
 
   .navlistcheckout {
     @apply flex-wrap flex flex-row space-x-4;
+    
+    li {
+      @apply ml-14;
+    }
   }
   .navigate {
     @apply mb-4 pb-1.5;
@@ -40,7 +49,12 @@ body {
     @apply flex-wrap flex flex-row justify-center;
     @apply justify-around mt-4 mb-4;
   }
+  .navItem {
+    @apply border-solid rounded-full border-2 border-yellow-500 p-2 m-2;
+  }
 }
+
+/*///////////////////////// {Content} //////////////////////////*/
 
 #content {
   @apply flex flex-wrap flex-col;
