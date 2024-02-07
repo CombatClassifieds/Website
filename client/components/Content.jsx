@@ -39,7 +39,7 @@ function AccordianMenu() {
                 onClick={() => handleAccordionClick(category)}
               >
                 {category}
-                {/* Render special symbol for accordion items */}
+                {/* Render special symbol for accordion items
                 {category === "OCS & Ranger School" ||
                 category === "Clothing" ||
                 category === "Uniform Accessories" ||
@@ -53,7 +53,7 @@ function AccordianMenu() {
                 category === "Tactical Gear" ||
                 category === "Weapons Accessories" ? (
                   <span className="accordionSymbol">^</span>
-                ) : null}
+                ) : null} */}
               </button>
 
               {/* Render accordion items based on selected category */}
@@ -155,7 +155,7 @@ function AccordianMenu() {
 
         <div id="brandsList">
           {popularBrands.map((brand) => (
-            <button className={brand} key={brand}>
+            <button className="brand" key={brand}>
               {brand}
             </button>
           ))}
