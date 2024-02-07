@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 #itemInfo {
   @apply w-full flex;
 
@@ -23,13 +22,10 @@
 #addToCart {
   button {
     @apply bg-gray-800 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-gray-700 hover:text-yellow-500;
-  } 
+  }
 }
 
 #itemPrice:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-
-
-

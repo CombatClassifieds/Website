@@ -24,8 +24,8 @@ function ItemDetails() {
   };
 
   const handleBitcoinClick = () => {
-    alert("USD WORTH")
-  }
+    alert("USD WORTH");
+  };
 
   return (
     <div id="itemInfo">
@@ -35,7 +35,7 @@ function ItemDetails() {
         <div id="sku">NSN: {tempItem.NSN}</div>
         <div id="itemPrice" onClick={handleBitcoinClick}>
           <FontAwesomeIcon icon={faBitcoinSign} />
-            {' '+ tempItem.price}
+          {" " + tempItem.price}
         </div>
         <div id="addToCart">
           <button onClick={handleAddToCart}>
@@ -68,7 +68,7 @@ function AccordianMenu() {
     "Weapons Accessories",
     "Clearance",
   ];
-  
+
   let popularBrands = [
     "Propper",
     "CamelBak",
@@ -82,13 +82,13 @@ function AccordianMenu() {
     "Tasmanian Tiger",
     "View All",
   ];
-  
+
   let ocsRangerSchoolItems = [
     "All OCS & Ranger School",
     "OCS - Click Here",
     "Ranger School - Click Here",
   ];
-  
+
   let clothingItems = [
     "All Clothing",
     "Belts",
@@ -103,7 +103,7 @@ function AccordianMenu() {
     "Uniforms",
     "Vests",
   ];
-  
+
   let uniformAccessories = [
     "All Uniform Accessories",
     "Personalized Items",
@@ -136,9 +136,8 @@ function AccordianMenu() {
     "Shoulder Cords",
     "Tabs",
   ];
-  
+
   let eyewear = ["All Eyewear", "Accessories", "Glasses", "Goggles", "Rx"];
-  
 
   const handleAccordionClick = (category) => {
     setSelectedCategory(selectedCategory === category ? null : category);
