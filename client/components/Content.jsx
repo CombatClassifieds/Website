@@ -17,6 +17,8 @@ function ItemDetails() {
     name: `L3g0 REDACTED of INF&^!KJM`,
     NSN: `9X237REDACTED73--74`,
     price: `230.17`,
+    brand: `Lockheed Martin`,
+    description: 'This is a lengthy redacted description',
   };
 
   const handleAddToCart = () => {
@@ -28,21 +30,21 @@ function ItemDetails() {
   };
 
   return (
-    <div id="itemInfo">
-      <img src={tempItem.img} alt="Item" />
-      <div id="itemSpecs">
-        <div id="itemName">{tempItem.name}</div>
-        <div id="sku">NSN: {tempItem.NSN}</div>
-        <div id="itemPrice" onClick={handleBitcoinClick}>
-          <FontAwesomeIcon icon={faBitcoinSign} />
-          {" " + tempItem.price}
-        </div>
-        <div id="addToCart">
-          <button onClick={handleAddToCart}>
-            <FontAwesomeIcon icon={faCartPlus} />
-          </button>
-        </div>
+    <div id="itemSpecs">
+    <img src={tempItem.img} alt="Item" />
+      <div id="itemName">{tempItem.name}</div>
+      <div id="sku">NSN: {tempItem.NSN}</div>
+      <div id="itemPrice" onClick={handleBitcoinClick}>
+        <FontAwesomeIcon icon={faBitcoinSign} />
+        {" " + tempItem.price}
       </div>
+      <div id="addToCart">
+        <button onClick={handleAddToCart}>
+          <FontAwesomeIcon icon={faCartPlus} />
+        </button>
+      </div>
+      <div id='itemBrand'>{tempItem.brand}</div>
+      <div id='itemDescription'>{tempItem.description}</div>
     </div>
   );
 }
