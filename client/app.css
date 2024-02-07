@@ -54,15 +54,15 @@
 #accordianMenu {
   @apply pl-3;
   .children > button {
-      @apply ml-4;
+    @apply ml-4;
   }
   .accordion {
-      @apply w-full block;
+    @apply w-full block;
     padding-right: 1em;
 
     &.has-children {
       &:after {
-        content: '↓';
+        content: "↓";
         font-size: 1.1em;
         color: yellow;
         float: right;
@@ -80,7 +80,7 @@
   @apply flex flex-col text-center pl-2;
 
   .theWordCategories {
-    @apply font-bold
+    @apply font-bold;
   }
 }
 
@@ -94,7 +94,7 @@ button {
   @apply flex flex-col text-center mt-6 mb-24 pl-2;
 
   .popularBrands {
-    @apply font-bold
+    @apply font-bold;
   }
 }
 
@@ -110,6 +110,7 @@ button {
   @apply flex items-center justify-center;
 }
 
-.brand, .accordion {
-  @apply hover:text-yellow-500
+.brand,
+.accordion {
+  @apply hover:text-yellow-500;
 }
