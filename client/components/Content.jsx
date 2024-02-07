@@ -18,7 +18,7 @@ function ItemDetails() {
     NSN: `9X237REDACTED73--74`,
     price: `230.17`,
     brand: `Lockheed Martin`,
-    description: 'This is a lengthy redacted description',
+    description: "This is a lengthy redacted description",
   };
 
   const handleAddToCart = () => {
@@ -31,7 +31,7 @@ function ItemDetails() {
 
   return (
     <div id="itemSpecs">
-    <img src={tempItem.img} alt="Item" />
+      <img src={tempItem.img} alt="Item" />
       <div id="itemName">{tempItem.name}</div>
       <div id="sku">NSN: {tempItem.NSN}</div>
       <div id="itemPrice" onClick={handleBitcoinClick}>
@@ -43,8 +43,8 @@ function ItemDetails() {
           <FontAwesomeIcon icon={faCartPlus} />
         </button>
       </div>
-      <div id='itemBrand'>{tempItem.brand}</div>
-      <div id='itemDescription'>{tempItem.description}</div>
+      <div id="itemBrand">{tempItem.brand}</div>
+      <div id="itemDescription">{tempItem.description}</div>
     </div>
   );
 }

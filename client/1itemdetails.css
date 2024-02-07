@@ -29,9 +29,8 @@
 }
 
 #itemBrand {
-  @apply flex justify-end
+  @apply flex justify-end;
 }
 
 #itemDescription {
-  
 }
