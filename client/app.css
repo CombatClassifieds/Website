@@ -10,9 +10,15 @@
     @apply text-xl font-bold;
   }
 
+  .signInLogo {
+    @apply hover:text-yellow-500;
+    cursor: pointer;
+  }
+
   .navlistsignincontainer {
     @apply flex flex-wrap flex-row justify-end;
     @apply space-x-2 pr-4 py-2;
+    @apply hover:text-yellow-500;
 
     a {
       @apply font-bold;
@@ -29,9 +35,16 @@
       @apply max-w-60;
     }
   }
+  .searchButton {
+    @apply hover:text-yellow-500;
+    @apply transition-transform hover:scale-110;
+  }
 
   .navlistcheckout {
     @apply flex-wrap flex flex-row space-x-4;
+    @apply hover:text-yellow-500;
+    @apply transition-transform hover:scale-110;
+    cursor: pointer;
 
     li {
       @apply ml-14;
@@ -48,6 +61,7 @@
     @apply border-solid rounded-full border-2 border-yellow-500 p-2 m-2;
     @apply transition-transform hover:scale-110;
     cursor: pointer;
+    @apply hover:text-yellow-500;
   }
 }
 
