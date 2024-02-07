@@ -7,9 +7,18 @@ import React from "react";
 const App = () => {
   return (
     <main>
-      <Header />
-      <Content />
-      <Footer />
+      <div
+        className="min-h-screen"
+        style={{
+          backgroundImage: "url('./images/thermalBG.jpeg')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <Header />
+        <Content />
+        <Footer />
+      </div>
     </main>
   );
 };
