@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Bootcamp";
-    src:
-        url("/fonts/Bootcamp-Morsecode.otf") format("opentype");
+  font-family: "Bootcamp";
+  src: url("/fonts/Bootcamp-Morsecode.otf") format("opentype");
 }
 
 .footer {
@@ -22,8 +21,8 @@
   }
 
   & > .black-bar {
-      font-family: "Bootcamp";
-      @apply bg-slate-950 z-10 h-full w-full relative text-white text-center p-6 mt-8 text-2xl;
+    font-family: "Bootcamp";
+    @apply bg-slate-950 z-10 h-full w-full relative text-white text-center p-6 mt-8 text-2xl;
   }
 }
 
