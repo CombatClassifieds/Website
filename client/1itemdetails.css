@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 #itemInfo {
-  @apply w-full flex;
+  @apply flex;
 
   img {
     @apply flex max-w-96 max-h-96 ml-56 mt-24;
+    @apply shadow-xl md:shadow-xl;
   }
 }
 
 #itemSpecs {
-  @apply border w-3/5 max-h-96 ml-24 mt-24;
+  @apply pl-6 pt-6 pr-6 pb-6 ml-24 mt-24 mb-56;
   @apply flex flex-col items-center;
+  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
 }
 
 #itemName {

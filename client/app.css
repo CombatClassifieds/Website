@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-teal-100;
-}
-
 .header {
-  @apply bg-gray-900 text-white;
+  @apply text-white;
 
   & > h1 {
     @apply text-xl font-bold;
