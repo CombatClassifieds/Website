@@ -59,32 +59,29 @@ body {
 }
 
 .active,
-.accordion:hover {
-  background-color: #58230f;
-  color: #a9e22e;
-}
-
-.active,
+.accordion:hover,
+.accordionItem:hover,
 .brand:hover {
   background-color: #58230f;
   color: #a9e22e;
 }
 
-.accordionItem:hover, .brand:hover {
-  background-color: #58230f;
-}
+.accordion {
+  width: 100%;
+  padding-right: 1em;
 
-.accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #090000;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-  color: #090000;
+  &.has-children {
+    &:after {
+      content: "+";
+      font-size: 1.3em;
+      color: black;
+      float: right;
+      margin-right: -1rem;
+    }
+    &.active:after {
+      content: "−";
+    }
+  }
 }
 
 #categories {
@@ -108,7 +105,6 @@ body {
   @apply bg-white;
   @apply flex flex-wrap flex-col;
   @apply border-solid border-2 border-black;
-
 }
 
 #categoriesList {
@@ -152,4 +148,3 @@ button {
   @apply pl-3;
   @apply font-bold;
 }
-
