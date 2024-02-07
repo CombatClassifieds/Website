@@ -2,14 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-#itemDetails {
-  @apply w-full flex;
+#itemSpecs {
+  @apply flex flex-col;
+  @apply pl-6 pt-6 pr-6 pb-6 ml-12 mt-12 h-fit;
+  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
 
   img {
-    @apply flex max-w-96 max-h-96 ml-56 mt-12;
+    @apply flex max-w-96 max-h-96 mb-6 mx-auto;
+    @apply shadow-xl md:shadow-xl;
   }
 }
 
-#itemSpecs {
-  @apply border max-w-96 max-h-96;
+#itemName {
+  @apply font-bold text-3xl;
+}
+
+#addToCart {
+  button {
+    @apply bg-gray-800 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-gray-700 hover:text-yellow-500;
+  }
+}
+
+#itemPrice:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#itemBrand {
+  @apply flex justify-end;
+}
+
+#itemDescription {
 }

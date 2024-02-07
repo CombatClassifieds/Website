@@ -57,14 +57,6 @@ function Search() {
   );
 }
 
-// function imporovedSearchBar {
-//   return(
-//     <div className = 'search'>
-//       <input type = 'search'>
-//     </div>
-//   )
-// }
-
 function Navigate() {
   return (
     <div className="navigate">
