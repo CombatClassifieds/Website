@@ -41,10 +41,10 @@
 #content {
   @apply flex flex-wrap flex-col;
 }
-
+/*---------------Accordion Styles-------------------*/
 .accordionItem {
-  background-color: #eee;
-  color: #444;
+  background-color: #047d18;
+  color: #a9e22e;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -55,12 +55,29 @@
 }
 
 .active,
-.accordion:hover {
-  background-color: #ccc;
+.accordion:hover,
+.accordionItem:hover,
+.brand:hover {
+  background-color: #58230f;
+  color: #a9e22e;
 }
 
-.accordionItem:hover {
-  background-color: #ccc;
+.accordion {
+  width: 100%;
+  padding-right: 1em;
+
+  &.has-children {
+    &:after {
+      content: "+";
+      font-size: 1.3em;
+      color: black;
+      float: right;
+      margin-right: -1rem;
+    }
+    &.active:after {
+      content: "−";
+    }
+  }
 }
 
 #categories {
@@ -70,10 +87,13 @@
 
 .theWordCategories {
   @apply bg-orange-400;
+  @apply pl-3;
+  @apply border-solid border-2 border-black;
 }
 
 .popularBrands {
   @apply bg-orange-400;
+  @apply pl-3;
 }
 
 #popularBrands {
@@ -86,17 +106,21 @@
 #categoriesList {
   @apply bg-white;
   @apply flex flex-wrap flex-col;
-  @apply border-solid border-2 border-black;
+  @apply border-solid border-b-2 border-l-2 border-r-2 border-black;
+  background-color: #047d18;
 }
 
 #categoriesList div,
 button {
   @apply text-left;
+  @apply pl-3;
 }
 
 #brandsList {
   @apply bg-white;
   @apply flex flex-wrap flex-col;
+  @apply pl-3;
+  background-color: #047d18;
 }
 
 #brandsList button {
@@ -108,13 +132,8 @@ button {
   @apply flex items-center justify-center;
 }
 
-.accordionSymbol {
-  margin-left: auto;
-  margin-right: 0.5rem;
-  font-size: 12px;
-  color: #999;
-}
-
 #categoriesAndBrands {
   @apply max-w-48;
+  @apply pl-3;
+  @apply font-bold;
 }
