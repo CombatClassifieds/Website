@@ -93,7 +93,8 @@ body {
   @apply border-solid border-2 border-black;
 }
 
-#categoriesList div, button {
+#categoriesList div,
+button {
   @apply text-left;
 }
 
@@ -112,10 +113,11 @@ body {
 }
 
 .accordionSymbol {
-  margin-left: auto;   
-  margin-right: 0.5rem; 
-  font-size: 12px;   
-  color: #999;       
+  margin-left: auto;
+  margin-right: 0.5rem;
+  font-size: 12px;
+  color: #999;
+}
 
 #categoriesAndBrands {
   @apply max-w-48;
