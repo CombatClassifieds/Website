@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
+    "easter-egg-collection": "^1.4.56",
     "postcss-import": "^16.0.0",
     "prettier": "^2.8.8"
   }

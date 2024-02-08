@@ -29,14 +29,6 @@ There are a few ways you can use tailwind, but the most productive workflow invo
 
 The palette that tailwind provides can be found [here](https://tailwindcss.com/docs/customizing-colors).
 
-#### Footer BG
-
-- `bg-gray-900`
-
-#### Yellow text
-
-- `text-yellow-500`
-
 ## Using LINT
 
 To view files that fail the lint, you can run this:
@@ -71,6 +63,24 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 function Foo() {
   return <FontAwesomeIcon icon={faLocationDot} />;
 }
+```
+
+## Easter Eggs
+
+Using [this] (https://github.com/WeiChiaChang/easter-egg-collection/blob/master/README.md) library
+
+type
+
+```
+travel
+gun
+tank
+cool
+hangover
+haters
+thankyou
+handsome
+psyduck
 ```
 
 ## Backend
