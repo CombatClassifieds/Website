@@ -113,7 +113,7 @@ function AccordianMenu() {
   };
 
   return (
-    <div id="accordianMenu">
+    <div id="categoriesAndBrands">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
         <div id="categoriesList">
@@ -145,7 +145,8 @@ function AccordianMenu() {
 function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
-      <div className="children">
+      <div>
+        {/* Render 'OCS & Ranger School' items */}
         {category.children.map((item) => (
           <SubCategory item={item} />
         ))}
@@ -163,6 +164,8 @@ function Category({ category, currentlySelected, onClick }) {
       <button className={classes.join(" ")} onClick={onClick}>
         {typeof category === "string" ? category : category.name}
       </button>
+
+      {/* Render accordion items based on selected category */}
       {children}
     </div>
   );
@@ -170,7 +173,7 @@ function Category({ category, currentlySelected, onClick }) {
 
 function SubCategory({ item }) {
   return (
-    <button key={item} className="accordion">
+    <button className="accordionItem" key={item}>
       {item}
     </button>
   );
