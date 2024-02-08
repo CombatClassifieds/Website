@@ -59,7 +59,6 @@ function Search() {
   );
 }
 
-
 function Navigate() {
   return (
     <div className="navigate">
