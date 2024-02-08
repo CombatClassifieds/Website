@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Bootcamp";
+  src: url("/fonts/Bootcamp-Morsecode.otf") format("opentype");
+}
+
 .footer {
   @apply relative overflow-hidden pt-4;
   aspect-ratio: 16/4;
@@ -11,8 +16,17 @@
   }
 
   & > video {
-    @apply absolute w-full;
+    @apply absolute w-full z-[0];
     top: -50%;
+  }
+
+  & > .black-bar {
+    font-family: "Bootcamp";
+    @apply z-10 h-full w-full relative text-white text-center p-6 mt-16 text-4xl;
+    /* @apply flex justify-center items-center; */
+    & > div {
+      @apply bg-slate-950 w-fit h-fit m-auto p-8;
+    }
   }
 }
 
