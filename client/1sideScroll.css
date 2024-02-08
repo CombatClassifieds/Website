@@ -1,13 +1,14 @@
 #seperator {
-  @apply border-t-[3px] mt-12;
+  @apply border-t-[3px] mt-12 w-6/12 ml-20;
 }
 
 #sideScroll {
-  @apply flex overflow-x-auto max-w-56 justify-center;
+  @apply flex overflow-x-auto justify-center;
   @apply bg-gray-800 bg-opacity-75 py-4 px-4 shadow-xl md:shadow-xl rounded-lg;
-  @apply pl-20 pr-20 mt-12 mb-48;
+  @apply pl-20 ml-20 mt-12 mb-48 w-6/12;
 
   #sideScrollImages {
     @apply max-w-48 max-h-48 m-6 rounded-lg;
+    @apply hover:scale-110 hover:opacity-80;
   }
 }
