@@ -110,7 +110,7 @@ function Popular_Brands() {
 function BlackBar() {
   return (
     <div className="black-bar">
-      <div>"REDACTED"</div>
+      <div>REDACTED</div>
     </div>
   );
 }

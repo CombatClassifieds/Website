@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faBitcoinSign } from "@fortawesome/free-solid-svg-icons";
 
@@ -55,10 +55,25 @@ function ItemDetails() {
 
 function AccordianMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+    const [popularBrands, setPopularBrands] = useState(null);
 
   const handleAccordionClick = (category) => {
     setSelectedCategory(selectedCategory === category ? null : category);
   };
+
+    useEffect(() => {
+        const setBrands = async () => {
+            try {
+                const res = await fetch('/api/popular_brands');
+                const brands = await res.json();
+                // console.log(brands);
+                setPopularBrands(brands);
+            } catch(e) {
+                console.warn(`Couldnt fetch popular brands`, e);
+            }
+        };
+        setBrands();
+    }, []);
 
   return (
     <div id="accordianMenu">
@@ -67,6 +82,7 @@ function AccordianMenu() {
         <div id="categoriesList">
           {categoryItems.map((category) => (
             <Category
+              key={typeof category === 'string' ? category : category.name}
               category={category}
               currentlySelected={selectedCategory === category}
               onClick={() => handleAccordionClick(category)}
@@ -79,9 +95,9 @@ function AccordianMenu() {
         <a className="popularBrands">POPULAR BRANDS</a>
 
         <div id="brandsList">
-          {popularBrands.map((brand) => (
-            <button className="brand" key={brand}>
-              {brand}
+          {popularBrands && popularBrands.map(({ id, name }) => (
+            <button className="brand" key={id}>
+              {name}
             </button>
           ))}
         </div>
@@ -95,7 +111,7 @@ function Category({ category, currentlySelected, onClick }) {
     currentlySelected && typeof category === "object" ? (
       <div className="children">
         {category.children.map((item) => (
-          <SubCategory item={item} />
+            <SubCategory key={item} item={item} />
         ))}
       </div>
     ) : null;
@@ -314,16 +330,16 @@ let categoryItems = [
   },
   "Clearance",
 ];
-let popularBrands = [
-  "Propper",
-  "CamelBak",
-  "Tru Spec",
-  "Rite in the Rain",
-  "Benchmade",
-  "Oakley",
-  "Raine",
-  "Sua Sponte",
-  "Gerber",
-  "Tasmanian Tiger",
-  "View All",
-];
+// let popularBrands = [
+//   "Propper",
+//   "CamelBak",
+//   "Tru Spec",
+//   "Rite in the Rain",
+//   "Benchmade",
+//   "Oakley",
+//   "Raine",
+//   "Sua Sponte",
+//   "Gerber",
+//   "Tasmanian Tiger",
+//   "View All",
+// ];

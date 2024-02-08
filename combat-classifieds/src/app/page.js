@@ -2,6 +2,7 @@ import Header from "./_header/Header";
 import Content from "./_content/Content";
 import Footer from "./_footer/Footer";
 
+// "/"
 export default function Home() {
   return (
     <main>
