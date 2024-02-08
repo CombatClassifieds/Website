@@ -64,6 +64,7 @@ function Foo() {
   return <FontAwesomeIcon icon={faLocationDot} />;
 }
 ```
+
 ## Easter Eggs
 
 Using [this] (https://github.com/WeiChiaChang/easter-egg-collection/blob/master/README.md) library
