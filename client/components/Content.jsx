@@ -281,4 +281,3 @@ let popularBrands = [
   "Invisible Inc.",
   "View All",
 ];
-
