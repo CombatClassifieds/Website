@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faBitcoinSign } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartPlus,
+  faBitcoinSign,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Content() {
   return (
@@ -96,10 +100,19 @@ function SideScroll() {
     "./images/futuristic_secret_tank.jpeg",
     "./images/futuristic_secret_tank.jpeg",
   ];
+
   return (
     <div id="sideScroll">
       {images.map((imageUrl, index) => (
-        <img key={index} id="sideScrollImages" src={imageUrl} />
+        <div key={index} className="imageContainer">
+          <img id="sideScrollImages" src={imageUrl} alt={`Image ${index}`} />
+          <button id="imageButton">
+            <FontAwesomeIcon icon={faCartPlus} />
+          </button>
+          <button id="viewItemButton">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </div>
       ))}
     </div>
   );
@@ -146,7 +159,6 @@ function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
       <div>
-        {/* Render 'OCS & Ranger School' items */}
         {category.children.map((item) => (
           <SubCategory item={item} />
         ))}
@@ -164,8 +176,6 @@ function Category({ category, currentlySelected, onClick }) {
       <button className={classes.join(" ")} onClick={onClick}>
         {typeof category === "string" ? category : category.name}
       </button>
-
-      {/* Render accordion items based on selected category */}
       {children}
     </div>
   );
