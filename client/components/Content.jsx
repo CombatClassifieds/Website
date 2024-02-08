@@ -86,7 +86,7 @@ function ItemDetails() {
             </div>
           </div>
           <div id="itemDescription">
-            {tempItem.description.split('\n\n').map((paragraph, i) => (
+            {tempItem.description.split("\n\n").map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
@@ -187,11 +187,7 @@ function Category({ category, currentlySelected, onClick }) {
 }
 
 function SubCategory({ item }) {
-  return (
-    <button className="accordionItem">
-      {item}
-    </button>
-  );
+  return <button className="accordionItem">{item}</button>;
 }
 
 let categoryItems = [
