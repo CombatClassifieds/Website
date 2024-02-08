@@ -6,7 +6,12 @@ export default function Content() {
   return (
     <div className="flex">
       <AccordianMenu />
-      <ItemDetails />
+      <div className="flex flex-col justify-center items-center">
+        <ItemDetails />
+        <div id="seperator">
+          <SideScroll />
+        </div>
+      </div>
     </div>
   );
 }
@@ -14,11 +19,25 @@ export default function Content() {
 function ItemDetails() {
   let tempItem = {
     img: `./images/lego_secret_tank.jpeg`,
-    name: `L3g0 REDACTED of INF&^!KJM`,
-    NSN: `9X237REDACTED73--74`,
+    name: `L3g0 [REDACTED]: Shadow Enigma Tank`,
+    NSN: `[REDACTED]237[REDACTED]73-[REDACTED]74`,
     price: `230.17`,
-    brand: `Lockheed Martin`,
-    description: "This is a lengthy redacted description",
+    brand: `[REDACTED] Advanced Technologies [CLASSIFIED]`,
+    description: `🔒 Step into the shadowy realm of covert operations, where whispers intertwine with the darkness and enigmas lie hidden in the folds of reality. 🌌
+    
+    🕵️‍♂️ The L3g0 [REDACTED]: Shadow Enigma Tank beckons, a cryptic marvel meticulously crafted by [REDACTED] Advanced Technologies [CLASSIFIED], veiled in the deepest shadows and shrouded in impenetrable secrecy. 🌑
+    
+    🔐 This is no ordinary Lego set; it is a gateway to a world where imagination dances with enigma, and the boundaries of the known fade into obscurity. 🧩
+    
+    🧭 Journey through the murky depths of clandestine missions as you assemble this enigmatic masterpiece, with each brick revealing cryptic secrets, and each step leading you further into the abyss of clandestine mystery. 🚪
+    
+    🌚 With its [REDACTED] technology and stealth-enhanced design, the Shadow Enigma Tank glides silently through the night, an ethereal specter haunting the shadows. 👻
+    
+    🔍 But tread cautiously, for within its labyrinthine chambers lie concealed secrets of the highest sensitivity. Unravel the mysteries that lurk within, unlocking hidden compartments and revealing classified armaments as you journey deeper into the heart of the clandestine. 🔓
+    
+    🚀 The Shadow Enigma Tank transcends mere toy status; it stands as a monument to the limitless power of imagination and the allure of the unknown. 🌟
+    
+    🌌 Embrace the shadows, embrace the mysteries, and embark on an odyssey where the only limit is the vast expanse of your imagination. 🚀`,
   };
 
   const handleAddToCart = () => {
@@ -30,21 +49,48 @@ function ItemDetails() {
   };
 
   return (
-    <div id="itemSpecs">
-      <img src={tempItem.img} alt="Item" />
-      <div id="itemName">{tempItem.name}</div>
-      <div id="sku">NSN: {tempItem.NSN}</div>
-      <div id="itemPrice" onClick={handleBitcoinClick}>
-        <FontAwesomeIcon icon={faBitcoinSign} />
-        {" " + tempItem.price}
+    <div className="flex">
+      <div id="outerBox">
+        <div id="itemSpecs" className="mr-8 flex-grow">
+          <img src={tempItem.img} alt="Item" />
+          <div id="itemName">{tempItem.name}</div>
+          <div id="sku">NSN: {tempItem.NSN}</div>
+          <div
+            id="itemPrice"
+            onClick={handleBitcoinClick}
+            className="flex items-center cursor-pointer"
+          >
+            <FontAwesomeIcon icon={faBitcoinSign} className="mr-1" />
+            {" " + tempItem.price}
+          </div>
+          <div id="addToCart">
+            <button onClick={handleAddToCart} className="flex items-center">
+              <FontAwesomeIcon icon={faCartPlus} />
+            </button>
+          </div>
+          <div id="itemBrand" className="">
+            {tempItem.brand}
+          </div>
+        </div>
+        <div id="itemDescription">{tempItem.description}</div>
       </div>
-      <div id="addToCart">
-        <button onClick={handleAddToCart}>
-          <FontAwesomeIcon icon={faCartPlus} />
-        </button>
-      </div>
-      <div id="itemBrand">{tempItem.brand}</div>
-      <div id="itemDescription">{tempItem.description}</div>
+    </div>
+  );
+}
+
+function SideScroll() {
+  const images = [
+    "./images/futuristic_secret_tank.jpeg",
+    "./images/secret_weapon.jpeg",
+    "./images/glasses.jpeg",
+    "./images/futuristic_secret_tank.jpeg",
+    "./images/futuristic_secret_tank.jpeg",
+  ];
+  return (
+    <div id="sideScroll">
+      {images.map((imageUrl, index) => (
+        <img key={index} id="sideScrollImages" src={imageUrl} />
+      ))}
     </div>
   );
 }
