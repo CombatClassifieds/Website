@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faBitcoinSign } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartPlus,
+  faBitcoinSign,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Content() {
   return (
     <div className="flex">
-      <AccordianMenu />
+      <AccordionMenu />
       <div className="flex flex-col justify-center items-center">
         <ItemDetails />
-        <Seperator />
+        <Separator />
         <SideScroll />
       </div>
     </div>
   );
 }
 
-function Seperator() {
+function Separator() {
   return <div id="seperator"></div>;
 }
 
@@ -81,7 +85,11 @@ function ItemDetails() {
               {tempItem.brand}
             </div>
           </div>
-          <div id="itemDescription">{tempItem.description}</div>
+          <div id="itemDescription">
+            {tempItem.description.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       ))}
     </div>
@@ -94,18 +102,27 @@ function SideScroll() {
     "./images/secret_weapon.jpeg",
     "./images/glasses.jpeg",
     "./images/futuristic_secret_tank.jpeg",
-    "./images/futuristic_secret_tank.jpeg",
+    "./images/spyplane.jpeg",
   ];
+
   return (
     <div id="sideScroll">
       {images.map((imageUrl, index) => (
-        <img key={index} id="sideScrollImages" src={imageUrl} />
+        <div key={index} className="imageContainer">
+          <img id="sideScrollImages" src={imageUrl} alt={`Image ${index}`} />
+          <button id="imageButton">
+            <FontAwesomeIcon icon={faCartPlus} />
+          </button>
+          <button id="viewItemButton">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </div>
       ))}
     </div>
   );
 }
 
-function AccordianMenu() {
+function AccordionMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleAccordionClick = (category) => {
@@ -117,8 +134,9 @@ function AccordianMenu() {
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
         <div id="categoriesList">
-          {categoryItems.map((category) => (
+          {categoryItems.map((category, index) => (
             <Category
+              key={index}
               category={category}
               currentlySelected={selectedCategory === category}
               onClick={() => handleAccordionClick(category)}
@@ -131,8 +149,8 @@ function AccordianMenu() {
         <a className="popularBrands">POPULAR BRANDS</a>
 
         <div id="brandsList">
-          {popularBrands.map((brand) => (
-            <button className="brand" key={brand}>
+          {popularBrands.map((brand, index) => (
+            <button key={index} className="brand">
               {brand}
             </button>
           ))}
@@ -146,9 +164,8 @@ function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
       <div>
-        {/* Render 'OCS & Ranger School' items */}
-        {category.children.map((item) => (
-          <SubCategory item={item} />
+        {category.children.map((item, index) => (
+          <SubCategory key={index} item={item} />
         ))}
       </div>
     ) : null;
@@ -164,19 +181,13 @@ function Category({ category, currentlySelected, onClick }) {
       <button className={classes.join(" ")} onClick={onClick}>
         {typeof category === "string" ? category : category.name}
       </button>
-
-      {/* Render accordion items based on selected category */}
       {children}
     </div>
   );
 }
 
 function SubCategory({ item }) {
-  return (
-    <button className="accordionItem" key={item}>
-      {item}
-    </button>
-  );
+  return <button className="accordionItem">{item}</button>;
 }
 
 let categoryItems = [

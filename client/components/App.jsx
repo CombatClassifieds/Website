@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import collection from "easter-egg-collection";
+// import collection from "easter-egg-collection";
 
 import React from "react";
 
