@@ -9,17 +9,17 @@ import {
 export default function Content() {
   return (
     <div className="flex">
-      <AccordianMenu />
+      <AccordionMenu />
       <div className="flex flex-col justify-center items-center">
         <ItemDetails />
-        <Seperator />
+        <Separator />
         <SideScroll />
       </div>
     </div>
   );
 }
 
-function Seperator() {
+function Separator() {
   return <div id="seperator"></div>;
 }
 
@@ -85,7 +85,11 @@ function ItemDetails() {
               {tempItem.brand}
             </div>
           </div>
-          <div id="itemDescription">{tempItem.description}</div>
+          <div id="itemDescription">
+            {tempItem.description.split('\n\n').map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       ))}
     </div>
@@ -98,7 +102,7 @@ function SideScroll() {
     "./images/secret_weapon.jpeg",
     "./images/glasses.jpeg",
     "./images/futuristic_secret_tank.jpeg",
-    "./images/futuristic_secret_tank.jpeg",
+    "./images/spyplane.jpeg",
   ];
 
   return (
@@ -118,7 +122,7 @@ function SideScroll() {
   );
 }
 
-function AccordianMenu() {
+function AccordionMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleAccordionClick = (category) => {
@@ -130,8 +134,9 @@ function AccordianMenu() {
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
         <div id="categoriesList">
-          {categoryItems.map((category) => (
+          {categoryItems.map((category, index) => (
             <Category
+              key={index}
               category={category}
               currentlySelected={selectedCategory === category}
               onClick={() => handleAccordionClick(category)}
@@ -144,8 +149,8 @@ function AccordianMenu() {
         <a className="popularBrands">POPULAR BRANDS</a>
 
         <div id="brandsList">
-          {popularBrands.map((brand) => (
-            <button className="brand" key={brand}>
+          {popularBrands.map((brand, index) => (
+            <button key={index} className="brand">
               {brand}
             </button>
           ))}
@@ -159,8 +164,8 @@ function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
       <div>
-        {category.children.map((item) => (
-          <SubCategory item={item} />
+        {category.children.map((item, index) => (
+          <SubCategory key={index} item={item} />
         ))}
       </div>
     ) : null;
@@ -183,7 +188,7 @@ function Category({ category, currentlySelected, onClick }) {
 
 function SubCategory({ item }) {
   return (
-    <button className="accordionItem" key={item}>
+    <button className="accordionItem">
       {item}
     </button>
   );
