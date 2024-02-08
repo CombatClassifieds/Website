@@ -1,0 +1,96 @@
+#accordianMenu {
+  @apply pl-3;
+  .children > button {
+    @apply ml-4;
+  }
+  .accordion {
+    @apply w-full block;
+    padding-right: 1em;
+
+    &.has-children {
+      &:after {
+        content: "↓";
+        font-size: 1.1em;
+        color: yellow;
+        float: right;
+        margin-right: -1rem;
+      }
+      &.active:after {
+        content: "-";
+      }
+    }
+  }
+}
+
+#categories {
+  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
+  @apply flex flex-col text-center pl-2;
+
+  .theWordCategories {
+    @apply font-bold;
+  }
+}
+
+#categoriesList div,
+button {
+  @apply text-left;
+}
+
+#popularBrands {
+  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
+  @apply flex flex-col text-center mt-6 mb-24 pl-2;
+
+  .popularBrands {
+    @apply font-bold;
+  }
+}
+
+#brandsList {
+  @apply flex flex-wrap flex-col;
+}
+
+#brandsList button {
+  @apply text-left;
+}
+
+#item {
+  @apply flex items-center justify-center;
+}
+
+.brand,
+.accordion {
+  @apply hover:text-yellow-500;
+}
+
+#itemSpecs {
+  @apply flex flex-col;
+  @apply pl-6 pt-6 pr-6 pb-6 ml-12 mt-12 h-fit;
+  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
+
+  img {
+    @apply flex max-w-96 max-h-96 mb-6 mx-auto;
+    @apply shadow-xl md:shadow-xl;
+  }
+}
+
+#itemName {
+  @apply font-bold text-3xl;
+}
+
+#addToCart {
+  button {
+    @apply bg-gray-800 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-gray-700 hover:text-yellow-500;
+  }
+}
+
+#itemPrice:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#itemBrand {
+  @apply flex justify-end;
+}
+
+#itemDescription {
+}
