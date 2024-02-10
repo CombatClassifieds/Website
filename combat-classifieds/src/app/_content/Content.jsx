@@ -55,11 +55,26 @@ function ItemDetails() {
 
 function AccordianMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+    const [categoryItems, setCategoryItems] = useState(null);
     const [popularBrands, setPopularBrands] = useState(null);
 
-  const handleAccordionClick = (category) => {
-    setSelectedCategory(selectedCategory === category ? null : category);
+  const handleAccordionClick = id => {
+    setSelectedCategory(selectedCategory === id ? null : id);
   };
+
+    useEffect(() => {
+        const setCategories = async () => {
+            try {
+                const res = await fetch('/api/categories');
+                const categoryItems = await res.json();
+                // console.log(categoryItems);
+                setCategoryItems(categoryItems);
+            } catch(e) {
+                console.warn(`Couldnt fetch categories`, e);
+            }
+        };
+        setCategories();
+    }, []);
 
     useEffect(() => {
         const setBrands = async () => {
@@ -75,57 +90,74 @@ function AccordianMenu() {
         setBrands();
     }, []);
 
-  return (
-    <div id="accordianMenu">
-      <div id="categories">
-        <a className="theWordCategories">CATEGORIES</a>
-        <div id="categoriesList">
-          {categoryItems.map((category) => (
-            <Category
-              key={typeof category === 'string' ? category : category.name}
-              category={category}
-              currentlySelected={selectedCategory === category}
-              onClick={() => handleAccordionClick(category)}
-            />
-          ))}
-        </div>
-      </div>
+    return (
+        <div id="accordianMenu">
+          <div id="categories">
+            <a className="theWordCategories">CATEGORIES</a>
+            <div id="categoriesList">
+              {categoryItems && categoryItems.map(({ id, name }) => (
+                  <Category
+                    key={id}
+                    id={id}
+                    category={name}
+                    currentlySelected={selectedCategory === id}
+                    onClick={() => handleAccordionClick(id)}
+                  />
+              ))}
+            </div>
+          </div>
 
-      <div id="popularBrands">
-        <a className="popularBrands">POPULAR BRANDS</a>
+          <div id="popularBrands">
+            <a className="popularBrands">POPULAR BRANDS</a>
 
-        <div id="brandsList">
-          {popularBrands && popularBrands.map(({ id, name }) => (
-            <button className="brand" key={id}>
-              {name}
-            </button>
-          ))}
+            <div id="brandsList">
+              {popularBrands && popularBrands.map(({ id, name }) => (
+                  <button className="brand" key={id}>
+                    {name}
+                  </button>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
-function Category({ category, currentlySelected, onClick }) {
+function Category({ id, category, currentlySelected, onClick }) {
+    const [subcategories, setSubcategories] = useState(null);
+
+    useEffect(() => {
+        const set = async () => {
+            try {
+                const res = await fetch(`/api/subcategories/${id}`);
+                const subcategories = await res.json();
+                // console.log(subcategories);
+                setSubcategories(subcategories);
+            } catch(e) {
+                console.warn(`Couldnt fetch popular subcategories`, e);
+            }
+        };
+        set();
+    }, []);
+
   const children =
-    currentlySelected && typeof category === "object" ? (
+    currentlySelected && subcategories && subcategories.length ? (
       <div className="children">
-        {category.children.map((item) => (
-            <SubCategory key={item} item={item} />
+        {subcategories.map(({ id, name }) => (
+            <SubCategory key={id} item={name} />
         ))}
       </div>
     ) : null;
 
   const classes = [
     "accordion",
-    `${typeof category === "object" ? "has-children" : ""}`,
+    `${subcategories && subcategories.length ? "has-children" : ""}`,
     `${currentlySelected ? "active" : ""}`,
   ];
 
   return (
-    <div key={category}>
+    <div>
       <button className={classes.join(" ")} onClick={onClick}>
-        {typeof category === "string" ? category : category.name}
+        {category}
       </button>
       {children}
     </div>
@@ -134,7 +166,7 @@ function Category({ category, currentlySelected, onClick }) {
 
 function SubCategory({ item }) {
   return (
-    <button key={item} className="accordion">
+    <button className="accordion">
       {item}
     </button>
   );
