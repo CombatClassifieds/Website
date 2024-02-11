@@ -14,14 +14,9 @@ services:
       - ./sql/seed.sql:/docker-entrypoint-initdb.d/seed.sql:ro
 
   server:
-    # image: node:20
     build: .
     ports:
       - "${PORT}:${PORT}"
     restart: always
     environment:
       PORT: ${PORT}
-    # working_dir: /opt/combat-classifieds
-    # volumes:
-    #   - ./combat-classifieds:/opt/combat-classifieds
-    # command: 'npm ci && npm run build && npm start'
