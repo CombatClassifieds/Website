@@ -119,3 +119,39 @@ INSERT INTO subcategories (name, parent) VALUES
   ('Signal Scramblers', 18),
   ('Hacking Devices', 18),
   ('Cyber Warfare Tools', 18);
+
+
+CREATE TABLE items (
+  id serial PRIMARY KEY,
+  name text NOT NULL,
+  img text NOT NULL,
+  nsn text NOT NULL,
+  price numeric NOT NULL,
+  brand text NOT NULL,
+  description text NOT NULL
+);
+
+INSERT INTO items (img, name, nsn, price, brand, description) VALUES
+  (
+    '/images/lego_secret_tank.jpeg',
+    'L3g0 [REDACTED]: Shadow Enigma Tank',
+    '[REDACTED]237[REDACTED]73-[REDACTED]74',
+    230.17,
+    '[REDACTED] Advanced Technologies [CLASSIFIED]',
+    '🔒 Step into the shadowy realm of covert operations, where whispers intertwine with the darkness and enigmas lie hidden in the folds of reality. 🌌
+
+🕵️‍♂️ The L3g0 [REDACTED]: Shadow Enigma Tank beckons, a cryptic marvel meticulously crafted by [REDACTED] Advanced Technologies [CLASSIFIED], veiled in the deepest shadows and shrouded in impenetrable secrecy. 🌑
+
+🔐 This is no ordinary Lego set; it is a gateway to a world where imagination dances with enigma, and the boundaries of the known fade into obscurity. 🧩
+
+🧭 Journey through the murky depths of clandestine missions as you assemble this enigmatic masterpiece, with each brick revealing cryptic secrets, and each step leading you further into the abyss of clandestine mystery. 🚪
+
+🌚 With its [REDACTED] technology and stealth-enhanced design, the Shadow Enigma Tank glides silently through the night, an ethereal specter haunting the shadows. 👻
+
+🔍 But tread cautiously, for within its labyrinthine chambers lie concealed secrets of the highest sensitivity. Unravel the mysteries that lurk within, unlocking hidden compartments and revealing classified armaments as you journey deeper into the heart of the clandestine. 🔓
+
+🚀 The Shadow Enigma Tank transcends mere toy status; it stands as a monument to the limitless power of imagination and the allure of the unknown. 🌟
+
+🌌 Embrace the shadows, embrace the mysteries, and embark on an odyssey where the only limit is the vast expanse of your imagination. 🚀'
+  )
+;

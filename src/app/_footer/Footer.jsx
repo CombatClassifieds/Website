@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <video autoPlay muted loop ref={videoRef}>
-        <source src="./videos/motivation.mp4" type="video/mp4" />
+        <source src="/videos/motivation.mp4" type="video/mp4" />
       </video>
       <div className="content">
         <FooterContactInfo />
@@ -31,7 +31,7 @@ function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
       <div className="footer_image">
-        <img src="./images/logo.png" />
+        <img src="/images/logo.png" />
       </div>
       <ul>
         <li>

@@ -40,7 +40,7 @@ function SignIn() {
 function Search() {
   return (
     <div className="search">
-      <img src="./images/logo.png" />
+      <img src="/images/logo.png" />
       <input type="search" />
       <button>
         <FontAwesomeIcon icon={faSearch} />
