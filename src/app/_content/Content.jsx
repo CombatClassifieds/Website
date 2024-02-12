@@ -23,7 +23,6 @@ export default function Content() {
   );
 }
 
-
 function Separator() {
   return <div id="seperator"></div>;
 }
@@ -129,95 +128,97 @@ function SideScroll() {
 
 function AccordianMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-    const [categoryItems, setCategoryItems] = useState(null);
-    const [popularBrands, setPopularBrands] = useState(null);
+  const [categoryItems, setCategoryItems] = useState(null);
+  const [popularBrands, setPopularBrands] = useState(null);
 
-  const handleAccordionClick = id => {
+  const handleAccordionClick = (id) => {
     setSelectedCategory(selectedCategory === id ? null : id);
   };
 
-    useEffect(() => {
-        const setCategories = async () => {
-            try {
-                const res = await fetch('/api/categories');
-                const categoryItems = await res.json();
-                // console.log(categoryItems);
-                setCategoryItems(categoryItems);
-            } catch(e) {
-                console.warn(`Couldnt fetch categories`, e);
-            }
-        };
-        setCategories();
-    }, []);
+  useEffect(() => {
+    const setCategories = async () => {
+      try {
+        const res = await fetch("/api/categories");
+        const categoryItems = await res.json();
+        // console.log(categoryItems);
+        setCategoryItems(categoryItems);
+      } catch (e) {
+        console.warn(`Couldnt fetch categories`, e);
+      }
+    };
+    setCategories();
+  }, []);
 
-    useEffect(() => {
-        const setBrands = async () => {
-            try {
-                const res = await fetch('/api/popular_brands');
-                const brands = await res.json();
-                // console.log(brands);
-                setPopularBrands(brands);
-            } catch(e) {
-                console.warn(`Couldnt fetch popular brands`, e);
-            }
-        };
-        setBrands();
-    }, []);
+  useEffect(() => {
+    const setBrands = async () => {
+      try {
+        const res = await fetch("/api/popular_brands");
+        const brands = await res.json();
+        // console.log(brands);
+        setPopularBrands(brands);
+      } catch (e) {
+        console.warn(`Couldnt fetch popular brands`, e);
+      }
+    };
+    setBrands();
+  }, []);
 
-    return (
-        <div id="accordianMenu">
-          <div id="categories">
-            <a className="theWordCategories">CATEGORIES</a>
-            <div id="categoriesList">
-              {categoryItems && categoryItems.map(({ id, name }) => (
-                  <Category
-                    key={id}
-                    id={id}
-                    category={name}
-                    currentlySelected={selectedCategory === id}
-                    onClick={() => handleAccordionClick(id)}
-                  />
-              ))}
-            </div>
-          </div>
-
-          <div id="popularBrands">
-            <a className="popularBrands">POPULAR BRANDS</a>
-
-            <div id="brandsList">
-              {popularBrands && popularBrands.map(({ id, name }) => (
-                  <button className="brand" key={id}>
-                    {name}
-                  </button>
-              ))}
-            </div>
-          </div>
+  return (
+    <div id="accordianMenu">
+      <div id="categories">
+        <a className="theWordCategories">CATEGORIES</a>
+        <div id="categoriesList">
+          {categoryItems &&
+            categoryItems.map(({ id, name }) => (
+              <Category
+                key={id}
+                id={id}
+                category={name}
+                currentlySelected={selectedCategory === id}
+                onClick={() => handleAccordionClick(id)}
+              />
+            ))}
         </div>
-    );
+      </div>
+
+      <div id="popularBrands">
+        <a className="popularBrands">POPULAR BRANDS</a>
+
+        <div id="brandsList">
+          {popularBrands &&
+            popularBrands.map(({ id, name }) => (
+              <button className="brand" key={id}>
+                {name}
+              </button>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function Category({ id, category, currentlySelected, onClick }) {
-    const [subcategories, setSubcategories] = useState(null);
+  const [subcategories, setSubcategories] = useState(null);
 
-    useEffect(() => {
-        const set = async () => {
-            try {
-                const res = await fetch(`/api/subcategories/${id}`);
-                const subcategories = await res.json();
-                // console.log(subcategories);
-                setSubcategories(subcategories);
-            } catch(e) {
-                console.warn(`Couldnt fetch popular subcategories`, e);
-            }
-        };
-        set();
-    }, []);
+  useEffect(() => {
+    const set = async () => {
+      try {
+        const res = await fetch(`/api/subcategories/${id}`);
+        const subcategories = await res.json();
+        // console.log(subcategories);
+        setSubcategories(subcategories);
+      } catch (e) {
+        console.warn(`Couldnt fetch popular subcategories`, e);
+      }
+    };
+    set();
+  }, []);
 
   const children =
     currentlySelected && subcategories && subcategories.length ? (
       <div className="children">
         {subcategories.map(({ id, name }) => (
-            <SubCategory key={id} item={name} />
+          <SubCategory key={id} item={name} />
         ))}
       </div>
     ) : null;
@@ -239,9 +240,5 @@ function Category({ id, category, currentlySelected, onClick }) {
 }
 
 function SubCategory({ item }) {
-  return (
-    <button className="accordion">
-      {item}
-    </button>
-  );
+  return <button className="accordion">{item}</button>;
 }

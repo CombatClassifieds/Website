@@ -1,6 +1,6 @@
 FROM node:20
 
-COPY combat-classifieds /opt/combat-classifieds
+COPY . /opt/combat-classifieds
 
 WORKDIR /opt/combat-classifieds
 
