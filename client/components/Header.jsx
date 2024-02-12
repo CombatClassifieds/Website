@@ -21,12 +21,12 @@ function SignIn() {
     <div className="signin">
       <nav className="username">
         <ul className="navlistsignincontainer">
-          <li>
+          <li className="signInLogo">
             <FontAwesomeIcon icon={faUser} />
             <a href="#">Sign In</a>
           </li>
-          <li>or</li>
-          <li>
+          <li className="signInLogo">or</li>
+          <li className="signInLogo">
             <a href="#">Register</a>
           </li>
         </ul>
@@ -38,11 +38,13 @@ function SignIn() {
 function Search() {
   return (
     <div className="search">
-      <img src="./images/logo.png" />
-      <input type="search" />
-      <button>
-        <FontAwesomeIcon icon={faSearch} />
-      </button>
+      <img src="./images/logo.png" alt="Logo" />
+      <form>
+        <input type="search" placeholder="Search..." />
+        <button type="submit" className="searchButton">
+          <FontAwesomeIcon icon={faSearch} />
+        </button>
+      </form>
       <ul className="navlistcheckout">
         <li>
           <FontAwesomeIcon icon={faHeart} />

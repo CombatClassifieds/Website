@@ -1,25 +1,53 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faBitcoinSign } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartPlus,
+  faBitcoinSign,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Content() {
   return (
     <div className="flex">
-      <AccordianMenu />
-      <ItemDetails />
+      <AccordionMenu />
+      <div className="flex flex-col justify-center items-center">
+        <ItemDetails />
+        <Separator />
+        <SideScroll />
+      </div>
     </div>
   );
 }
 
+function Separator() {
+  return <div id="seperator"></div>;
+}
+
 function ItemDetails() {
-  let tempItem = {
-    img: `./images/lego_secret_tank.jpeg`,
-    name: `L3g0 REDACTED of INF&^!KJM`,
-    NSN: `9X237REDACTED73--74`,
-    price: `230.17`,
-    brand: `Lockheed Martin`,
-    description: "This is a lengthy redacted description",
-  };
+  let tempItems = [
+    {
+      img: `./images/lego_secret_tank.jpeg`,
+      name: `L3g0 [REDACTED]: Shadow Enigma Tank`,
+      NSN: `[REDACTED]237[REDACTED]73-[REDACTED]74`,
+      price: `230.17`,
+      brand: `[REDACTED] Advanced Technologies [CLASSIFIED]`,
+      description: `🔒 Step into the shadowy realm of covert operations, where whispers intertwine with the darkness and enigmas lie hidden in the folds of reality. 🌌
+
+      🕵️‍♂️ The L3g0 [REDACTED]: Shadow Enigma Tank beckons, a cryptic marvel meticulously crafted by [REDACTED] Advanced Technologies [CLASSIFIED], veiled in the deepest shadows and shrouded in impenetrable secrecy. 🌑
+
+      🔐 This is no ordinary Lego set; it is a gateway to a world where imagination dances with enigma, and the boundaries of the known fade into obscurity. 🧩
+
+      🧭 Journey through the murky depths of clandestine missions as you assemble this enigmatic masterpiece, with each brick revealing cryptic secrets, and each step leading you further into the abyss of clandestine mystery. 🚪
+
+      🌚 With its [REDACTED] technology and stealth-enhanced design, the Shadow Enigma Tank glides silently through the night, an ethereal specter haunting the shadows. 👻
+
+      🔍 But tread cautiously, for within its labyrinthine chambers lie concealed secrets of the highest sensitivity. Unravel the mysteries that lurk within, unlocking hidden compartments and revealing classified armaments as you journey deeper into the heart of the clandestine. 🔓
+
+      🚀 The Shadow Enigma Tank transcends mere toy status; it stands as a monument to the limitless power of imagination and the allure of the unknown. 🌟
+
+      🌌 Embrace the shadows, embrace the mysteries, and embark on an odyssey where the only limit is the vast expanse of your imagination. 🚀`,
+    },
+  ];
 
   const handleAddToCart = () => {
     alert("Item added to cart!");
@@ -30,26 +58,71 @@ function ItemDetails() {
   };
 
   return (
-    <div id="itemSpecs">
-      <img src={tempItem.img} alt="Item" />
-      <div id="itemName">{tempItem.name}</div>
-      <div id="sku">NSN: {tempItem.NSN}</div>
-      <div id="itemPrice" onClick={handleBitcoinClick}>
-        <FontAwesomeIcon icon={faBitcoinSign} />
-        {" " + tempItem.price}
-      </div>
-      <div id="addToCart">
-        <button onClick={handleAddToCart}>
-          <FontAwesomeIcon icon={faCartPlus} />
-        </button>
-      </div>
-      <div id="itemBrand">{tempItem.brand}</div>
-      <div id="itemDescription">{tempItem.description}</div>
+    <div className="flex">
+      {tempItems.map((tempItem, index) => (
+        <div key={index} id="outerBox">
+          <div id="itemSpecs" className="mr-8 flex-grow">
+            <img src={tempItem.img} alt={tempItem.name} />
+            <div id="itemName">{tempItem.name}</div>
+            <div id="sku">NSN: {tempItem.NSN}</div>
+            <div
+              id="itemPrice"
+              onClick={handleBitcoinClick}
+              className="flex items-center cursor-pointer"
+            >
+              <FontAwesomeIcon icon={faBitcoinSign} className="mr-1" />
+              {" " + tempItem.price}
+            </div>
+            <div id="addToCart">
+              <button
+                onClick={handleAddToCart}
+                className="flex items-center hover:scale-110"
+              >
+                <FontAwesomeIcon icon={faCartPlus} />
+              </button>
+            </div>
+            <div id="itemBrand" className="">
+              {tempItem.brand}
+            </div>
+          </div>
+          <div id="itemDescription">
+            {tempItem.description.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-function AccordianMenu() {
+function SideScroll() {
+  const images = [
+    "./images/futuristic_secret_tank.jpeg",
+    "./images/secret_weapon.jpeg",
+    "./images/glasses.jpeg",
+    "./images/futuristic_secret_tank.jpeg",
+    "./images/spyplane.jpeg",
+  ];
+
+  return (
+    <div id="sideScroll">
+      {images.map((imageUrl, index) => (
+        <div key={index} className="imageContainer">
+          <img id="sideScrollImages" src={imageUrl} alt={`Image ${index}`} />
+          <button id="imageButton">
+            <FontAwesomeIcon icon={faCartPlus} />
+          </button>
+          <button id="viewItemButton">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function AccordionMenu() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleAccordionClick = (category) => {
@@ -57,12 +130,13 @@ function AccordianMenu() {
   };
 
   return (
-    <div id="accordianMenu">
+    <div id="categoriesAndBrands">
       <div id="categories">
         <a className="theWordCategories">CATEGORIES</a>
         <div id="categoriesList">
-          {categoryItems.map((category) => (
+          {categoryItems.map((category, index) => (
             <Category
+              key={index}
               category={category}
               currentlySelected={selectedCategory === category}
               onClick={() => handleAccordionClick(category)}
@@ -75,8 +149,8 @@ function AccordianMenu() {
         <a className="popularBrands">POPULAR BRANDS</a>
 
         <div id="brandsList">
-          {popularBrands.map((brand) => (
-            <button className="brand" key={brand}>
+          {popularBrands.map((brand, index) => (
+            <button key={index} className="brand">
               {brand}
             </button>
           ))}
@@ -89,9 +163,9 @@ function AccordianMenu() {
 function Category({ category, currentlySelected, onClick }) {
   const children =
     currentlySelected && typeof category === "object" ? (
-      <div className="children">
-        {category.children.map((item) => (
-          <SubCategory item={item} />
+      <div>
+        {category.children.map((item, index) => (
+          <SubCategory key={index} item={item} />
         ))}
       </div>
     ) : null;
@@ -113,213 +187,167 @@ function Category({ category, currentlySelected, onClick }) {
 }
 
 function SubCategory({ item }) {
-  return (
-    <button key={item} className="accordion">
-      {item}
-    </button>
-  );
+  return <button className="accordionItem">{item}</button>;
 }
 
 let categoryItems = [
   {
-    name: "OCS & Ranger School",
+    name: "Shadow Operations Gear",
     children: [
-      "All OCS & Ranger School",
-      "OCS - Click Here",
-      "Ranger School - Click Here",
+      "Covert Surveillance Equipment",
+      "Invisible Communication Devices",
+      "Stealthy Infiltration Tools",
+      "Assassination Instruments",
+      "Undetectable Camouflage Gear",
     ],
   },
-  "ROTC/JROTC Items",
+  "Counterintelligence Tools",
   {
-    name: "Clothing",
+    name: "Black Ops Uniforms",
     children: [
-      "All Clothing",
-      "Belts",
-      "Hot Weather OCP Uniforms",
-      "Gloves",
-      "Jackets, Rainwear",
-      "Kids",
-      "P.T.",
-      "T-Shirts, Sweatshirts",
-      "Underwear",
-      "Uniforms-Female",
-      "Uniforms",
-      "Vests",
+      "Nightshade Tactical Attire",
+      "Silent Shadow Outfits",
+      "Ghost Recon Suits",
+      "Phantom Black Armor",
+      "Stealth Assassin Garb",
     ],
   },
   {
-    name: "Uniform Accessories",
+    name: "Covert Accessories",
     children: [
-      "All Uniform Accessories",
-      "Personalized Items",
-      "AGSU-Pinks & Greens",
-      "Army OCP Badges",
-      "Army OCP Patches",
-      "Army OCP Rank",
-      "Army OCP Scrolls",
-      "Army OCP Tabs",
-      "Air Force OCP Badges",
-      "Air Force OCP Patches",
-      "Air Force OCP Rank",
-      "Air Force Uniform Items",
-      "Badges",
-      "Bars",
-      "Branch",
-      "Buttons",
-      "Cap Devices",
-      "Devices",
-      "Flashes",
-      "Medals",
-      "Ovals",
-      "Parade Items",
-      "Patches",
-      "Rank",
-      "Ribbons",
-      "Scrolls",
-      "Shoulder Boards",
-      "Service Stripes",
-      "Shoulder Cords",
-      "Tabs",
+      "Silent Footwear",
+      "Invisible Camouflage Nets",
+      "Shadowy Face Masks",
+      "Concealed Weaponry Holsters",
+      "Untraceable Gloves",
     ],
   },
-  "Crests",
+  "Assassination Tools",
   {
-    name: "Eyewear",
-    children: ["All Eyewear", "Accessories", "Glasses", "Goggles", "Rx"],
-  },
-  {
-    name: "Field Equipment",
+    name: "Evasion Equipment",
     children: [
-      "All Field Equipment",
-      "ALICE< MOLLE GEAR",
-      "Bags, Packs, Cases",
-      "Emergency Preparedness",
-      "Essential Emergency Items",
-      "Field Gear",
-      "Field Supplies",
-      "First Aid",
-      "Hydration",
-      "Navigation",
-      "Notebooks Cards",
-      "Rappelling",
-      "Sleeping",
-      "Survival",
-      "Wallets/ID Holders",
+      "Smoke Bombs",
+      "Flashbang Grenades",
+      "Disappearing Ink",
+      "Chameleon Cloaks",
+      "Silent Night Parachutes",
     ],
   },
   {
-    name: "Flashlights",
+    name: "Interrogation Devices",
     children: [
-      "All Flashlights",
-      "Accessories",
-      "Chemlights",
-      "Headlamps",
-      "LED",
+      "Mind Control Implants",
+      "Memory Suppressors",
+      "Truth Serum Syringes",
+      "Brainwave Scanners",
+      "Loyalty Enforcers",
     ],
   },
   {
-    name: "Footwear & Accessories",
+    name: "Covert Communication Devices",
     children: [
-      "All Footwear & Accessories",
-      "Boot Accessories",
-      "AR670-1 Compliant",
-      "Boot Care",
-      "Boots",
-      "Foot Care",
-      "Insoles",
-      "Socks",
-      "Shoes",
+      "Encrypted Radios",
+      "Cryptographic Phones",
+      "Invisible Ink Pens",
+      "Secure Messaging Apps",
+      "Subdermal Transceivers",
     ],
   },
   {
-    name: "Gifts, Novelty, Books/Manuals",
+    name: "Infiltration Tools",
     children: [
-      "All Gifts, Novelty, Books/Manuals",
-      "Books/Manuals",
-      "Clothing & Hats",
-      "Coins",
-      "Decals, Stickers",
-      "Flags",
-      "Games, Toys",
-      "Magnets",
-      "Gift Cards",
-      "Jewelry",
-      "Key Rings",
-      "KIA, POW",
-      "Morale Patches & Lugage Tags",
-      "Mugs",
-      "Ornaments",
-      "Watches",
+      "Stealth Drones",
+      "Lockpicking Kits",
+      "Grapple Guns",
+      "Climbing Gear",
+      "Remote Surveillance Drones",
     ],
   },
   {
-    name: "Headwear",
+    name: "Sabotage Equipment",
     children: [
-      "All Headwear",
-      "Balaclavas, Hoods, Masks",
-      "Berets",
-      "Boonie Hats",
-      "Campaign Hats and Accessories",
-      "Hat Accessories",
-      "Helmets and Accessories",
-      "Novelty",
-      "Patrol Caps",
-      "Veils, Scarves",
-      "Watch Caps, Beenies",
+      "Remote Detonators",
+      "Saboteur Toolkits",
+      "Radio Jammers",
+      "Cyber Warfare Tools",
+      "Explosive Charges",
     ],
   },
   {
-    name: "Knives & Tools",
+    name: "Exfiltration Gear",
     children: [
-      "All Knives & Tools",
-      "Fixed Blades",
-      "Folding Knives",
-      "Machetes",
-      "Sharpeners & Acc",
-      "Sheaths",
-      "Tools",
-    ],
-  },
-  "New Arrivals",
-  {
-    name: "Tactical Gear",
-    children: [
-      "All Tactical Gear",
-      "Bags, Packs",
-      "Duty Gear",
-      "Ghillie Suits/Camo Acc",
-      "Holsters, Duty Gear",
-      "Optics",
-      "Protective Gear, Restraints",
-      "Vests",
+      "Escape Ropes",
+      "Emergency Extraction Kits",
+      "Clandestine Transportation",
+      "Fake Identities",
+      "Vanishing Smoke Bombs",
     ],
   },
   {
-    name: "Weapons Accessories",
+    name: "Covert Training Materials",
     children: [
-      "All WEapons Accessories",
-      "Bipods",
-      "Cleaning Kits & Accessories",
-      "Grips",
-      "Holsters",
-      "Lanyards",
-      "Magazines & Accessories",
-      "Slings",
-      "Weapons Accessories",
+      "Espionage Manuals",
+      "Stealth Combat Training",
+      "Undercover Operations Guides",
+      "Covert Surveillance Courses",
+      "Interrogation Tactics Workbooks",
     ],
   },
-  "Clearance",
+  "Restricted Access Files",
+  {
+    name: "Covert Missions Planning",
+    children: [
+      "Mission Briefing Software",
+      "Assassination Strategies",
+      "Infiltration Blueprints",
+      "Extraction Protocols",
+      "Covert Ops Logistics",
+    ],
+  },
+  {
+    name: "Black Ops Accessories",
+    children: [
+      "Shadowy Sunglasses",
+      "Covert Watches",
+      "Stealthy Backpacks",
+      "Mysterious Masks",
+      "Eclipse Gadgets",
+    ],
+  },
+  "Underground Equipment",
+  {
+    name: "Clandestine Weapons",
+    children: [
+      "Silenced Firearms",
+      "Deadly Poisons",
+      "Stealth Knives",
+      "Concealable Explosives",
+      "Covert Combat Gear",
+    ],
+  },
+  {
+    name: "Electronic Warfare Devices",
+    children: [
+      "EMP Generators",
+      "Surveillance Drones",
+      "Signal Scramblers",
+      "Hacking Devices",
+      "Cyber Warfare Tools",
+    ],
+  },
+  "Restricted Area Access Tools",
 ];
+
 let popularBrands = [
-  "Propper",
-  "CamelBak",
-  "Tru Spec",
-  "Rite in the Rain",
-  "Benchmade",
-  "Oakley",
-  "Raine",
-  "Sua Sponte",
-  "Gerber",
-  "Tasmanian Tiger",
+  "Stealth Tech",
+  "Shadow Tactics",
+  "Covert Solutions",
+  "Obsidian Ops",
+  "Phantom Innovations",
+  "Silent Strike",
+  "DarkNet Defense",
+  "Stealthy Solutions",
+  "Shadow Elite",
+  "Invisible Inc.",
   "View All",
 ];
