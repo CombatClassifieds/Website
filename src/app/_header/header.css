@@ -16,7 +16,11 @@
   .search {
     @apply flex-wrap flex flex-row justify-center items-center;
     @apply space-x-2;
-    color: black;
+    color: yellow;
+
+    input[type="search"] {
+      color: black;
+    }
 
     img {
       @apply max-w-28 max-h-28 mr-24;
