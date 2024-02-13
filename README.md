@@ -47,21 +47,33 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
 ### Apache benchmark [Responses per second](https://httpd.apache.org/docs/2.4/programs/ab.html)
 
-- After installation run ```ab http://127.0.0.1:3000``` 
-    - take note of time taken for requests
-- now run ```ab -n 1000 -c 100 http://127.0.0.1:3000``` to  run 100 concurrent requests for a total of 1000 requests
-    -   take note of requests per second
-    - What is your pcs CPUs usage looking like while this is happening?
-- This will run what users see - ```npm run build``` and will determine what is dynamic and what is static and optmize it automatically.
+- After installation run `ab http://127.0.0.1:3000`
+  - take note of time taken for requests
+- now run `ab -n 1000 -c 100 http://127.0.0.1:3000` to run 100 concurrent requests for a total of 1000 requests
+  - take note of requests per second
+  - What is your pcs CPUs usage looking like while this is happening?
+    - Your code should run as hard as possible to complete its task
+    - maybe we can horizontillly scale instead if we cant get more CPU usage
+      - [docker containers](https://www.squash.io/how-to-improve-docker-container-performance/) and [kubernetes](https://kubernetes.io/)
+- This will run what users see - `npm run build` and will determine what is dynamic and what is static and optmize it automatically.
 
-### Questions to ask 
+### Maybe use
+
+[kubernetes](https://kubernetes.io/)
+
+[selenium](https://www.selenium.dev/documentation/webdriver/)
+
+### Questions to ask
+
 Can it scale?
+
+Withstand DDOS attacks?
 
 Millions of requests?
 
 Bottlenecked database?
 
-Automate benchmarks with ```npm run benchmark``` maybe?
+Automate benchmarks with `npm run benchmark` maybe?
 
 How long does it take to stop/start?
 
