@@ -140,18 +140,49 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED] Advanced Technologies [CLASSIFIED]',
     '🔒 Step into the shadowy realm of covert operations, where whispers intertwine with the darkness and enigmas lie hidden in the folds of reality. 🌌
 
-🕵️‍♂️ The L3g0 [REDACTED]: Shadow Enigma Tank beckons, a cryptic marvel meticulously crafted by [REDACTED] Advanced Technologies [CLASSIFIED], veiled in the deepest shadows and shrouded in impenetrable secrecy. 🌑
+    🕵️‍♂️ The L3g0 [REDACTED]: Shadow Enigma Tank beckons, a cryptic marvel meticulously crafted by [REDACTED] Advanced Technologies [CLASSIFIED], veiled in the deepest shadows and shrouded in impenetrable secrecy. 🌑
 
-🔐 This is no ordinary Lego set; it is a gateway to a world where imagination dances with enigma, and the boundaries of the known fade into obscurity. 🧩
+    🔐 This is no ordinary Lego set; it is a gateway to a world where imagination dances with enigma, and the boundaries of the known fade into obscurity. 🧩
 
-🧭 Journey through the murky depths of clandestine missions as you assemble this enigmatic masterpiece, with each brick revealing cryptic secrets, and each step leading you further into the abyss of clandestine mystery. 🚪
+    🧭 Journey through the murky depths of clandestine missions as you assemble this enigmatic masterpiece, with each brick revealing cryptic secrets, and each step leading you further into the abyss of clandestine mystery. 🚪
 
-🌚 With its [REDACTED] technology and stealth-enhanced design, the Shadow Enigma Tank glides silently through the night, an ethereal specter haunting the shadows. 👻
+    🌚 With its [REDACTED] technology and stealth-enhanced design, the Shadow Enigma Tank glides silently through the night, an ethereal specter haunting the shadows. 👻
 
-🔍 But tread cautiously, for within its labyrinthine chambers lie concealed secrets of the highest sensitivity. Unravel the mysteries that lurk within, unlocking hidden compartments and revealing classified armaments as you journey deeper into the heart of the clandestine. 🔓
+    🔍 But tread cautiously, for within its labyrinthine chambers lie concealed secrets of the highest sensitivity. Unravel the mysteries that lurk within, unlocking hidden compartments and revealing classified armaments as you journey deeper into the heart of the clandestine. 🔓
 
-🚀 The Shadow Enigma Tank transcends mere toy status; it stands as a monument to the limitless power of imagination and the allure of the unknown. 🌟
+    🚀 The Shadow Enigma Tank transcends mere toy status; it stands as a monument to the limitless power of imagination and the allure of the unknown. 🌟
 
-🌌 Embrace the shadows, embrace the mysteries, and embark on an odyssey where the only limit is the vast expanse of your imagination. 🚀'
-  )
-;
+    🌌 Embrace the shadows, embrace the mysteries, and embark on an odyssey where the only limit is the vast expanse of your imagination. 🚀'
+  ),
+  (
+    '/images/secret_weapon.jpeg',
+    'M4 [REDACTED]: Ghost Recon Rifle',
+    '[REDACTED]782[REDACTED]91-[REDACTED]92',
+    299.99,
+    '[REDACTED] Advanced Weaponry Division [CLASSIFIED]',
+    '🔒 Step into the covert world of elite operations with the M4 [REDACTED]: Ghost Recon Rifle. Crafted by [REDACTED] Advanced Weaponry Division [CLASSIFIED], it''s shrouded in secrecy and designed for clandestine missions. 🌌 Unveil its mysteries as you explore its advanced features and delve into the realm of imagination and intrigue. 🔐'
+  ),
+  (
+    '/images/glasses.jpeg',
+    'StealthVision [REDACTED]: Nightwalker Goggles',
+    '[REDACTED]538[REDACTED]21-[REDACTED]22',
+    199.99,
+    '[REDACTED] Advanced Optics Division [CLASSIFIED]',
+    '🔒 Get ready to unleash your inner ninja with StealthVision [REDACTED]: Nightwalker Goggles! Crafted by the sneaky minds at [REDACTED] Advanced Optics Division [CLASSIFIED], these glasses will have you prowling the night like a stealthy cat burglar...or at least stumbling around your backyard without tripping over the garden gnome. Embrace your inner spy and prepare for covert ops in your own backyard! 🔐'
+  ),
+  (
+    '/images/futuristic_secret_tank.jpeg',
+    'X1 [REDACTED]: Phantom Sentinel Tank',
+    '[REDACTED]986[REDACTED]51-[REDACTED]52',
+    999.99,
+    '[REDACTED] Advanced Warfare Division [CLASSIFIED]',
+    '🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it''s a whisper in the night, a ghost on the battlefield. 🌌 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. 🔐'
+  ),
+  (
+    '/images/spyplane.jpeg',
+    'StealthWing [REDACTED]: Shadow Surveillance Aircraft',
+    '[REDACTED]672[REDACTED]88-[REDACTED]89',
+    1499.99,
+    '[REDACTED] Advanced Aeronautics Division [CLASSIFIED]',
+    '🔒 Prepare for the ultimate reconnaissance mission with the StealthWing [REDACTED]: Shadow Surveillance Aircraft. Engineered by the covert specialists at [REDACTED] Advanced Aeronautics Division [CLASSIFIED], this plane is more than just metal and engines - it''s a ghost in the sky, a silent observer of secrets. 🌌 Equipped with state-of-the-art cameras and sensor arrays, it can peer into the darkest corners of enemy territory without ever being seen. Glide through the clouds undetected and gather intelligence with unrivaled precision. The shadows are its domain, and the secrets it uncovers are its prize. Step into the cockpit and become the master of stealth reconnaissance. 🔐'
+  );

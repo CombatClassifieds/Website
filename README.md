@@ -33,4 +33,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+- install docker
+- Set the temp.env.local to env.local
+- `set -a; source .env.local; set +a`
+
+## Errors
+
+- [Error response from daemon: driver failed programming external connectivity on endpoint website-sql-1 (e5c5d7ca78ecc5b2a52d028f0e0af887022699e4c1b1d097a7d4ac445414a096): Error starting userland proxy: listen tcp4 0.0.0.0:5432: bind: address already in use](https://stackoverflow.com/questions/38249434/docker-postgres-failed-to-bind-tcp-0-0-0-05432-address-already-in-use)
