@@ -42,4 +42,3 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 ## Errors
 
 - [Error response from daemon: driver failed programming external connectivity on endpoint website-sql-1 (e5c5d7ca78ecc5b2a52d028f0e0af887022699e4c1b1d097a7d4ac445414a096): Error starting userland proxy: listen tcp4 0.0.0.0:5432: bind: address already in use](https://stackoverflow.com/questions/38249434/docker-postgres-failed-to-bind-tcp-0-0-0-05432-address-already-in-use)
--

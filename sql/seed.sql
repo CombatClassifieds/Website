@@ -160,7 +160,7 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]782[REDACTED]91-[REDACTED]92',
     299.99,
     '[REDACTED] Advanced Weaponry Division [CLASSIFIED]',
-    `🔒 Step into the covert world of elite operations with the M4 [REDACTED]: Ghost Recon Rifle. Crafted by [REDACTED] Advanced Weaponry Division [CLASSIFIED], it's shrouded in secrecy and designed for clandestine missions. 🌌 Unveil its mysteries as you explore its advanced features and delve into the realm of imagination and intrigue. 🔐`,
+    '🔒 Step into the covert world of elite operations with the M4 [REDACTED]: Ghost Recon Rifle. Crafted by [REDACTED] Advanced Weaponry Division [CLASSIFIED], it''s shrouded in secrecy and designed for clandestine missions. 🌌 Unveil its mysteries as you explore its advanced features and delve into the realm of imagination and intrigue. 🔐'
   ),
   (
     '/images/glasses.jpeg',
@@ -176,7 +176,7 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]986[REDACTED]51-[REDACTED]52',
     999.99,
     '[REDACTED] Advanced Warfare Division [CLASSIFIED]',
-    `🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it's a whisper in the night, a ghost on the battlefield. 🌌 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. 🔐`
+    '🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it''s a whisper in the night, a ghost on the battlefield. 🌌 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. 🔐'
   ),
   (
     '/images/secret_spy_plane.jpeg',
@@ -184,5 +184,5 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]672[REDACTED]88-[REDACTED]89',
     1499.99,
     '[REDACTED] Advanced Aeronautics Division [CLASSIFIED]',
-    `🔒 Prepare for the ultimate reconnaissance mission with the StealthWing [REDACTED]: Shadow Surveillance Aircraft. Engineered by the covert specialists at [REDACTED] Advanced Aeronautics Division [CLASSIFIED], this plane is more than just metal and engines - it's a ghost in the sky, a silent observer of secrets. 🌌 Equipped with state-of-the-art cameras and sensor arrays, it can peer into the darkest corners of enemy territory without ever being seen. Glide through the clouds undetected and gather intelligence with unrivaled precision. The shadows are its domain, and the secrets it uncovers are its prize. Step into the cockpit and become the master of stealth reconnaissance. 🔐`
-  )
+    '🔒 Prepare for the ultimate reconnaissance mission with the StealthWing [REDACTED]: Shadow Surveillance Aircraft. Engineered by the covert specialists at [REDACTED] Advanced Aeronautics Division [CLASSIFIED], this plane is more than just metal and engines - it''s a ghost in the sky, a silent observer of secrets. 🌌 Equipped with state-of-the-art cameras and sensor arrays, it can peer into the darkest corners of enemy territory without ever being seen. Glide through the clouds undetected and gather intelligence with unrivaled precision. The shadows are its domain, and the secrets it uncovers are its prize. Step into the cockpit and become the master of stealth reconnaissance. 🔐'
+  );
