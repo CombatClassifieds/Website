@@ -160,7 +160,13 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]782[REDACTED]91-[REDACTED]92',
     299.99,
     '[REDACTED] Advanced Weaponry Division [CLASSIFIED]',
-    '🔒 Step into the covert world of elite operations with the M4 [REDACTED]: Ghost Recon Rifle. Crafted by [REDACTED] Advanced Weaponry Division [CLASSIFIED], it''s shrouded in secrecy and designed for clandestine missions. 🌌 Unveil its mysteries as you explore its advanced features and delve into the realm of imagination and intrigue. 🔐'
+    '🔒 Dive into the clandestine world of elite operations with the M4 [REDACTED]: Ghost Recon Rifle. 🌌
+
+    🔍 Delve into the shadows where secrecy reigns supreme, and unleash the power of mystery and intrigue. 🧐
+
+    🚀 Crafted by [REDACTED] Advanced Weaponry Division [CLASSIFIED], this rifle is more than just a weapon - it''s a symbol of covert expertise. 🛠️
+
+    🔐 Explore its concealed capabilities and uncover the hidden arsenal of innovation that lies within. But beware, with great power comes great responsibility...and maybe a little paranoia. 🌪️'
   ),
   (
     '/images/glasses.jpeg',
@@ -168,7 +174,13 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]538[REDACTED]21-[REDACTED]22',
     199.99,
     '[REDACTED] Advanced Optics Division [CLASSIFIED]',
-    '🔒 Get ready to unleash your inner ninja with StealthVision [REDACTED]: Nightwalker Goggles! Crafted by the sneaky minds at [REDACTED] Advanced Optics Division [CLASSIFIED], these glasses will have you prowling the night like a stealthy cat burglar...or at least stumbling around your backyard without tripping over the garden gnome. Embrace your inner spy and prepare for covert ops in your own backyard! 🔐'
+    '🔒 Prepare to immerse yourself in the shadows with StealthVision [REDACTED]: Nightwalker Goggles! 🌌
+
+    🕶️ Crafted by the ingenious minds at [REDACTED] Advanced Optics Division [CLASSIFIED], these goggles are your gateway to the clandestine world of covert operations. 🚪
+
+    🔍 Slip into the night with unparalleled stealth and navigate the darkness with ease, as you become the master of stealth reconnaissance. 🌟
+
+    🔐 Unlock the secrets of the night and embrace the enigma that lies within. Who knew espionage could look this stylish? 🎩'
   ),
   (
     '/images/futuristic_secret_tank.jpeg',
@@ -176,7 +188,15 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]986[REDACTED]51-[REDACTED]52',
     999.99,
     '[REDACTED] Advanced Warfare Division [CLASSIFIED]',
-    '🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it''s a whisper in the night, a ghost on the battlefield. 🌌 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. 🔐'
+    '🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. 🌌
+
+    🚀 Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it''s a whisper in the night, a ghost on the battlefield. 🛡️
+
+    🔍 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. 🌚
+
+    🌟 With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. 💥
+
+    🔐 Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. But don''t forget to bring a flashlight, just in case. 🔦'
   ),
   (
     '/images/spyplane.jpeg',
@@ -184,5 +204,16 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '[REDACTED]672[REDACTED]88-[REDACTED]89',
     1499.99,
     '[REDACTED] Advanced Aeronautics Division [CLASSIFIED]',
-    '🔒 Prepare for the ultimate reconnaissance mission with the StealthWing [REDACTED]: Shadow Surveillance Aircraft. Engineered by the covert specialists at [REDACTED] Advanced Aeronautics Division [CLASSIFIED], this plane is more than just metal and engines - it''s a ghost in the sky, a silent observer of secrets. 🌌 Equipped with state-of-the-art cameras and sensor arrays, it can peer into the darkest corners of enemy territory without ever being seen. Glide through the clouds undetected and gather intelligence with unrivaled precision. The shadows are its domain, and the secrets it uncovers are its prize. Step into the cockpit and become the master of stealth reconnaissance. 🔐'
+    '🔒 Prepare for the ultimate reconnaissance mission with the StealthWing [REDACTED]: Shadow Surveillance Aircraft. 🌌
+
+    🚀 Crafted by the covert specialists at [REDACTED] Advanced Aeronautics Division [CLASSIFIED], this plane is more than just metal and engines - it''s a ghost in the sky, a silent observer of secrets. 🛩️
+
+    🔍 Equipped with state-of-the-art cameras and sensor arrays, it can peer into the darkest corners of enemy territory without ever being seen. 🕵️
+
+    🔧 Glide through the clouds undetected and gather intelligence with unrivaled precision. The shadows are its domain, and the secrets it uncovers are its prize. 💎
+
+    🔐 But remember, even spies need a good maintenance crew. 🔦'
   );
+
+
+
