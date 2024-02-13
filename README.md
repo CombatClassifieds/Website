@@ -42,3 +42,27 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 ## Errors
 
 - [Error response from daemon: driver failed programming external connectivity on endpoint website-sql-1 (e5c5d7ca78ecc5b2a52d028f0e0af887022699e4c1b1d097a7d4ac445414a096): Error starting userland proxy: listen tcp4 0.0.0.0:5432: bind: address already in use](https://stackoverflow.com/questions/38249434/docker-postgres-failed-to-bind-tcp-0-0-0-05432-address-already-in-use)
+
+## System Metrics
+
+### Apache benchmark [Responses per second](https://httpd.apache.org/docs/2.4/programs/ab.html)
+
+- After installation run ```ab http://127.0.0.1:3000``` 
+    - take note of time taken for requests
+- now run ```ab -n 1000 -c 100 http://127.0.0.1:3000``` to  run 100 concurrent requests for a total of 1000 requests
+    -   take note of requests per second
+    - What is your pcs CPUs usage looking like while this is happening?
+- This will run what users see - ```npm run build``` and will determine what is dynamic and what is static and optmize it automatically.
+
+### Questions to ask 
+Can it scale?
+
+Millions of requests?
+
+Bottlenecked database?
+
+Automate benchmarks with ```npm run benchmark``` maybe?
+
+How long does it take to stop/start?
+
+Will my server maximize its resources?
