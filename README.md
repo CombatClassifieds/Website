@@ -1,88 +1,36 @@
-# Combat Classifieds
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Prerequisites
+## Getting Started
 
-First, install all the node dependencies:
-
-```bash
-npm install
-```
-
-## Frontend
-
-To get the build server running for the frontend, just type:
+First, run the development server:
 
 ```bash
-npm run dev:client
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-This should open a running vite process, which tells you where the frontend is hosted
-(usually `http://localhost:5173`).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Using Tailwind
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-There are a few ways you can use tailwind, but the most productive workflow involves using the
-`@apply` keyword in `client/app.css` to apply specific
-[tailwind rules](https://tailwindcss.com/docs/font-weight).
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-### Useful Colors
+## Learn More
 
-The palette that tailwind provides can be found [here](https://tailwindcss.com/docs/customizing-colors).
+To learn more about Next.js, take a look at the following resources:
 
-## Using LINT
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-To view files that fail the lint, you can run this:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-```bash
-npm run lint
-```
+## Deploy on Vercel
 
-> **Note**, it will be run for every pull request and commit in the `REDACTED` branch.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-To automatically prettify your code, run:
-
-```bash
-npx prettier --write .
-```
-
-> **Warning**, this may break your code! Please make sure you commit before prettifying
-> so you can roll-back in case anything breaks.
-
-### Font Awesome
-
-We use [FontAwesome](https://fontawesome.com) for the icons. To look up an icon you can use, try the
-[search system](https://fontawesome.com/search). When using one of the icons, import it as
-a react component:
-
-```jsx
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-
-// ... then somewhere in your code ...
-
-function Foo() {
-  return <FontAwesomeIcon icon={faLocationDot} />;
-}
-```
-
-## Easter Eggs
-
-Using [this] (https://github.com/WeiChiaChang/easter-egg-collection/blob/master/README.md) library
-
-type
-
-```
-travel
-gun
-tank
-cool
-hangover
-haters
-thankyou
-handsome
-psyduck
-```
-
-## Backend
-
-> TODO
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -6,6 +6,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
+import "./header.css";
+
 export default function Header() {
   return (
     <header className="header">
@@ -21,12 +23,12 @@ function SignIn() {
     <div className="signin">
       <nav className="username">
         <ul className="navlistsignincontainer">
-          <li className="signInLogo">
+          <li>
             <FontAwesomeIcon icon={faUser} />
             <a href="#">Sign In</a>
           </li>
-          <li className="signInLogo">or</li>
-          <li className="signInLogo">
+          <li>or</li>
+          <li>
             <a href="#">Register</a>
           </li>
         </ul>
@@ -38,13 +40,11 @@ function SignIn() {
 function Search() {
   return (
     <div className="search">
-      <img src="./images/logo.png" alt="Logo" />
-      <form>
-        <input type="search" placeholder="Search..." />
-        <button type="submit" className="searchButton">
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
-      </form>
+      <img src="/images/logo.png" />
+      <input type="search" />
+      <button>
+        <FontAwesomeIcon icon={faSearch} />
+      </button>
       <ul className="navlistcheckout">
         <li>
           <FontAwesomeIcon icon={faHeart} />

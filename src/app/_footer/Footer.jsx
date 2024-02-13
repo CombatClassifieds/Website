@@ -1,6 +1,10 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+import "./footer.css";
 
 export default function Footer() {
   let videoRef = useRef();
@@ -11,8 +15,8 @@ export default function Footer() {
   });
   return (
     <footer className="footer">
-      <video autoplay muted loop ref={videoRef}>
-        <source src="./videos/motivation.mp4" type="video/mp4" />
+      <video autoPlay muted loop ref={videoRef}>
+        <source src="/videos/motivation.mp4" type="video/mp4" />
       </video>
       <div className="content">
         <FooterContactInfo />
@@ -27,7 +31,7 @@ function FooterContactInfo() {
   return (
     <div className="footer_contact_box">
       <div className="footer_image">
-        <img src="./images/logo.png" />
+        <img src="/images/logo.png" />
       </div>
       <ul>
         <li>
@@ -106,7 +110,7 @@ function Popular_Brands() {
 function BlackBar() {
   return (
     <div className="black-bar">
-      <div>"REDACTED"</div>
+      <div>REDACTED</div>
     </div>
   );
 }
