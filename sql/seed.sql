@@ -179,7 +179,7 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
     '🔒 Prepare to embark on a journey into the shadows with the X1 [REDACTED]: Phantom Sentinel Tank. Crafted by the clandestine minds at [REDACTED] Advanced Warfare Division [CLASSIFIED], this tank is more than just a machine - it''s a whisper in the night, a ghost on the battlefield. 🌌 Its secrets are known only to the select few who dare to pilot it, its capabilities shrouded in mystery and speculation. With advanced stealth technology and cloaking capabilities, it can slip past enemy lines undetected, striking with deadly precision before disappearing into the darkness once more. Step into the darkness and embrace the unknown, for in the realm of the Phantom Sentinel, truth is the ultimate illusion. 🔐'
   ),
   (
-    '/images/secret_spy_plane.jpeg',
+    '/images/spyplane.jpeg',
     'StealthWing [REDACTED]: Shadow Surveillance Aircraft',
     '[REDACTED]672[REDACTED]88-[REDACTED]89',
     1499.99,
