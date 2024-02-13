@@ -7,6 +7,7 @@ import {
   faBitcoinSign,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 import "./page.css";
 
@@ -15,7 +16,7 @@ export default function Item({ params: { id } }) {
     <>
       <ItemDetails id={id} />
       <Separator />
-      <SideScroll />
+      <SideScroll id={id} />
     </>
   );
 }
@@ -89,28 +90,45 @@ function ItemDetails({ id }) {
   );
 }
 
-function SideScroll() {
-  const images = [
-    "/images/futuristic_secret_tank.jpeg",
-    "/images/secret_weapon.jpeg",
-    "/images/glasses.jpeg",
-    "/images/futuristic_secret_tank.jpeg",
-    "/images/spyplane.jpeg",
-  ];
+function SideScroll({ id }) {
+  // const images = [
+  //   "/images/futuristic_secret_tank.jpeg",
+  //   "/images/secret_weapon.jpeg",
+  //   "/images/glasses.jpeg",
+  //   "/images/futuristic_secret_tank.jpeg",
+  //   "/images/spyplane.jpeg",
+  // ];
+
+  const [images, setImages] = useState(null);
+
+  useEffect(() => {
+    const setItems = async () => {
+      try {
+        const res = await fetch(`/api/suggested/${id}`);
+        const tempItems = await res.json();
+        // console.log(categoryItems);
+        setImages(tempItems);
+      } catch (e) {
+        console.warn(`Couldnt fetch item ${id}`, e);
+      }
+    };
+    setItems();
+  }, []);
 
   return (
     <div id="sideScroll">
-      {images.map((imageUrl, index) => (
-        <div key={index} className="imageContainer">
-          <img id="sideScrollImages" src={imageUrl} alt={`Image ${index}`} />
-          <button id="imageButton">
-            <FontAwesomeIcon icon={faCartPlus} />
-          </button>
-          <button id="viewItemButton">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </button>
-        </div>
-      ))}
+      {images &&
+        images.map(({ img, id }) => (
+          <div key={id} className="imageContainer">
+            <img className="sideScrollImages" src={img} alt={`Image ${id}`} />
+            <button className="imageButton">
+              <FontAwesomeIcon icon={faCartPlus} />
+            </button>
+            <Link className="viewItemButton" href={`/item/${id}`}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </Link>
+          </div>
+        ))}
     </div>
   );
 }
