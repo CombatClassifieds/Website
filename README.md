@@ -45,25 +45,34 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment)
 
 ## System Metrics
 
-### Apache benchmark [Responses per second](https://httpd.apache.org/docs/2.4/programs/ab.html)
+### Database Optimization
 
-- After installation run `ab http://127.0.0.1:3000`
-  - take note of time taken for requests
-- now run `ab -n 1000 -c 100 http://127.0.0.1:3000` to run 100 concurrent requests for a total of 1000 requests
-  - take note of requests per second
-  - What is your pcs CPUs usage looking like while this is happening?
-    - Your code should run as hard as possible to complete its task
-    - maybe we can horizontillly scale instead if we cant get more CPU usage
-      - [docker containers](https://www.squash.io/how-to-improve-docker-container-performance/) and [kubernetes](https://kubernetes.io/)
-- This will run what users see - `npm run build` and will determine what is dynamic and what is static and optmize it automatically.
+- [faker.js](https://fakerjs.dev/) to gen large amount of fake data (millions of rows)
+- Do not serve media from database, only urls
+- How long did it take to get information back from our query?
+  - Where did it take the longest in a table? Where can we shave off the MOST amount of time
 
-### Maybe use
+### Server Optimization
 
-[kubernetes](https://kubernetes.io/)
+### Helpful Links
 
-[selenium](https://www.selenium.dev/documentation/webdriver/)
+##### Code
+
+- [EXPLAIN / ANALYZE](https://www.postgresql.org/docs/current/sql-explain.html)
+
+- [Performance.now()](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+
+##### Tools
+
+- [Kubernetes](https://kubernetes.io/)
+
+- [Selenium](https://www.selenium.dev/documentation/webdriver/)
+
+- [K6 server load testing](https://k6.io/)
 
 ### Questions to ask
+
+3 paths of optimization Client, server, and database
 
 Can it scale?
 
@@ -71,7 +80,7 @@ Withstand DDOS attacks?
 
 Millions of requests?
 
-Bottlenecked database?
+Where are we bottlenecked?
 
 Automate benchmarks with `npm run benchmark` maybe?
 
