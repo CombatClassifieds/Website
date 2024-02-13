@@ -62,7 +62,21 @@ How long does it take to stop/start?
 
 Will my server maximize its resources?
 
-# Developer Journals
+# Developer notes
+
+[Deliverables](https://learn-2.galvanize.com/cohorts/3986/blocks/998/content_files/System%20Design%20Capstone/01-introduction-to-system-design-capstone.md)
+
+###### Engineering Journal
+
+    Each team member will submit a writeup of your work and findings throughout SDC. This includes the tests you run, the results you observe, and the optimizations you make. Record both qualitative and quantitative notes, collecting as much quantitative data as possible.
+
+###### Video Report
+
+    Each team member will make a short video detailing the work they did during SDC and the lessons learned along the way, all presented using measured quantitative observations. Read more about video reports here.
+
+###### Final Conversation
+
+    You'll present the work you did during SDC with your team and answer any follow up questions as a group.
 
 ## [Anthony](https://github.com/anthonymeadows) - Optimization of XXX
 
