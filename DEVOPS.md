@@ -36,9 +36,11 @@
 
 - [EXPLAIN / ANALYZE](https://www.postgresql.org/docs/current/sql-explain.html)
 - [Performance.now()](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+- [faker.js](https://fakerjs.dev/)
 
 ##### Tools
 
+- [Apache benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html)
 - [Kubernetes](https://kubernetes.io/)
 - [Selenium](https://www.selenium.dev/documentation/webdriver/)
 - [K6](https://k6.io/)
@@ -78,7 +80,9 @@ Will my server maximize its resources?
 
     You'll present the work you did during SDC with your team and answer any follow up questions as a group.
 
-## [Anthony](https://github.com/anthonymeadows) - Optimization of XXX
+## [Anthony](https://github.com/anthonymeadows) - Optimization of Database
+
+In order to get a better idea of our database laoding times, I first needed to load more data into our current list of available items from five, to millions.
 
 ## [Dillon]() - Optimization of XXX
 
