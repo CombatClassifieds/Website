@@ -7,6 +7,12 @@
 - How long did it take to get information back from our query?
   - Where did it take the longest in a table? Where can we shave off the MOST amount of time
 
+#### Database seeding
+
+run faker.js with node to generate an insert statement into our seed.sql file. It appends information to th end. The number generated is on line 33 as the length parameter.
+
+MAKE A COPY OF SEED FILE BEFORE MAKING SEED DATA - Dont push seeded data
+
 ### Server Optimization
 
 - get rid of unneeded code
@@ -36,9 +42,11 @@
 
 - [EXPLAIN / ANALYZE](https://www.postgresql.org/docs/current/sql-explain.html)
 - [Performance.now()](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+- [faker.js](https://fakerjs.dev/)
 
 ##### Tools
 
+- [Apache benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html)
 - [Kubernetes](https://kubernetes.io/)
 - [Selenium](https://www.selenium.dev/documentation/webdriver/)
 - [K6](https://k6.io/)
@@ -78,7 +86,10 @@ Will my server maximize its resources?
 
     You'll present the work you did during SDC with your team and answer any follow up questions as a group.
 
-## [Anthony](https://github.com/anthonymeadows) - Optimization of XXX
+## [Anthony](https://github.com/anthonymeadows) - Optimization of Database
+
+In order to get a better idea of our database laoding times, I first needed to load more data into our current list of available items from five, to millions.
+For this I used [fakerjs](https://fakerjs.dev/) and the pg library.
 
 ## [Dillon]() - Optimization of XXX
 
