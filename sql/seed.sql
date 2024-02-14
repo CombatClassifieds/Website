@@ -216,4 +216,5 @@ INSERT INTO items (img, name, nsn, price, brand, description) VALUES
   );
 
 
+-----------------------------------SEED DATA-----------------------------------
 

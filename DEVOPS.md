@@ -7,6 +7,10 @@
 - How long did it take to get information back from our query?
   - Where did it take the longest in a table? Where can we shave off the MOST amount of time
 
+#### Database seeding
+
+Run faker.js to generate an insert statement into our seed.sql file. Delete before push to minimize the need for space and etc.
+
 ### Server Optimization
 
 - get rid of unneeded code
@@ -83,6 +87,7 @@ Will my server maximize its resources?
 ## [Anthony](https://github.com/anthonymeadows) - Optimization of Database
 
 In order to get a better idea of our database laoding times, I first needed to load more data into our current list of available items from five, to millions.
+For this I used [fakerjs](https://fakerjs.dev/) and the pg library.
 
 ## [Dillon]() - Optimization of XXX
 
