@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import fs from "fs";
+const { faker } = require("@faker-js/faker");
+const fs = require("fs");
 
 const generateFakeData = () => {
   const name = faker.commerce.productName();
