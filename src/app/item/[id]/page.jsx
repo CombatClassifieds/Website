@@ -33,7 +33,6 @@ function ItemDetails({ id }) {
       try {
         const res = await fetch(`/api/items/${id}`);
         const tempItems = await res.json();
-        // console.log(categoryItems);
         setTempItems(tempItems);
       } catch (e) {
         console.warn(`Couldnt fetch item ${id}`, e);
