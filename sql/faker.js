@@ -1,5 +1,5 @@
-const { faker } = require("@faker-js/faker");
-const fs = require("fs");
+// import { faker } from "@faker-js/faker"
+// import fs from "fs"
 
 const generateFakeData = () => {
   const name = faker.commerce.productName();
@@ -30,7 +30,7 @@ const generateInsertStatements = (tableName, data, batchSize = 1000) => {
   return insertStatements;
 };
 
-const fakeData = Array.from({ length: 100000 }, generateFakeData);
+const fakeData = Array.from({ length: 200000 }, generateFakeData);
 const insertStatements = generateInsertStatements("items", fakeData);
 
 fs.appendFileSync("./sql/seed.sql", insertStatements.join("\n"));

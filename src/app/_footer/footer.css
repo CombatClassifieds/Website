@@ -6,33 +6,33 @@
 .footer {
   @apply relative overflow-hidden pt-4;
   aspect-ratio: 16/4;
+}
 
-  & > .content {
-    @apply text-white flex justify-between relative z-10;
-  }
+.footer > .content {
+  @apply text-white flex justify-between relative z-10;
+}
 
-  & > video {
-    @apply absolute w-full z-[0];
-    top: -50%;
-  }
+.footer > video {
+  @apply absolute w-full z-[0];
+  top: -50%;
+}
 
-  & > .black-bar {
-    font-family: "Bootcamp";
-    @apply z-10 h-full w-full relative text-white text-center p-6 mt-16 text-4xl;
-    /* @apply flex justify-center items-center; */
-    & > div {
-      @apply bg-slate-950 w-fit h-fit m-auto p-8;
-    }
-  }
+.footer > .black-bar {
+  font-family: "Bootcamp";
+  @apply z-10 h-full w-full relative text-white text-center p-6 mt-16 text-4xl;
+}
+
+.footer > .black-bar > div {
+  @apply bg-slate-950 w-fit h-fit m-auto p-8;
 }
 
 .footer_contact_box {
   @apply flex flex-col items-center;
   @apply justify-center ps-24;
+}
 
-  li {
-    @apply text-center;
-  }
+.footer_contact_box li {
+  @apply text-center;
 }
 
 .footer_image {
@@ -42,16 +42,16 @@
 .FooterSiteNav {
   @apply flex justify-between;
   margin: 20px;
+}
 
-  ul {
-    list-style: none;
-    padding: 0;
-  }
+.FooterSiteNav ul {
+  list-style: none;
+  padding: 0;
+}
 
-  li {
-    @apply flex justify-center;
-    @apply mx-2;
-  }
+.FooterSiteNav li {
+  @apply flex justify-center;
+  @apply mx-2;
 }
 
 .FooterHeader {

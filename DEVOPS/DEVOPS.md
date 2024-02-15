@@ -86,10 +86,47 @@ Will my server maximize its resources?
 
     You'll present the work you did during SDC with your team and answer any follow up questions as a group.
 
-## [Anthony](https://github.com/anthonymeadows) - Optimization of Database
+## [Anthony](https://github.com/anthonymeadows) 
 
-In order to get a better idea of our database laoding times, I first needed to load more data into our current list of available items from five, to millions.
+As you can see from the images below, our website took 12.12 seconds to load at url path `/items/1` on first attempt.
+
+<details>
+<summary>Click to view image</summary>
+
+![Image 1](pageload.png)
+</details>
+
+### Optimization of Database
+In order to get a better idea of our loading times, I first needed to load more data into our current list of available sellable items from five, to millions.
 For this I used [fakerjs](https://fakerjs.dev/) and the pg library.
+
+Go to `./sql/faker.js` to see how.
+
+After seeding the database with 2 million items in the item table, I had to refactor the code in order to support such a large database.
+
+Now, I will access our docker container, and use the *EXPLAIN* *ANALYZE* keywords to further breakdown specific queries.  
+
+--See commands below --
+
+```
+docker exec -it website-sql-1 psql -U combatclassifieds
+EXPLAIN ANALYZE SELECT * FROM items WHERE id = 656;
+EXPLAIN ANALZE SELECT img, id FROM items WHERE id <> 656 LIMIT 5 OFFSET 1;
+```
+
+<details>
+<summary>Click to view query time</summary>
+
+![Image 1](item646query.png)
+![Image 1](suggested_items_loading.png)
+</details>
+
+From this information we can presently say our database needs no further optimization. 
+
+
+### Optimizing Page Load Times
+
+The first thing I notice on the pie chart, is that the javascript file size takes up 16GB of data. While this may only take 0.35 seconds to load, I am hoping after minification of all files, our website load time is significantly increased.
 
 ## [Dillon]() - Optimization of XXX
 
