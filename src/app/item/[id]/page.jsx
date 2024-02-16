@@ -33,7 +33,6 @@ function ItemDetails({ id }) {
       try {
         const res = await fetch(`/api/items/${id}`);
         const tempItems = await res.json();
-        // console.log(categoryItems);
         setTempItems(tempItems);
       } catch (e) {
         console.warn(`Couldnt fetch item ${id}`, e);
@@ -91,13 +90,6 @@ function ItemDetails({ id }) {
 }
 
 function SideScroll({ id }) {
-  // const images = [
-  //   "/images/futuristic_secret_tank.jpeg",
-  //   "/images/secret_weapon.jpeg",
-  //   "/images/glasses.jpeg",
-  //   "/images/futuristic_secret_tank.jpeg",
-  //   "/images/spyplane.jpeg",
-  // ];
 
   const [images, setImages] = useState(null);
 
@@ -106,7 +98,6 @@ function SideScroll({ id }) {
       try {
         const res = await fetch(`/api/suggested/${id}`);
         const tempItems = await res.json();
-        // console.log(categoryItems);
         setImages(tempItems);
       } catch (e) {
         console.warn(`Couldnt fetch item ${id}`, e);

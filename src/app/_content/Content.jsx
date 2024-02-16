@@ -1,12 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartPlus,
-  faBitcoinSign,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
 
 import "./content.css";
 
@@ -35,7 +29,6 @@ function AccordianMenu() {
       try {
         const res = await fetch("/api/categories");
         const categoryItems = await res.json();
-        // console.log(categoryItems);
         setCategoryItems(categoryItems);
       } catch (e) {
         console.warn(`Couldnt fetch categories`, e);
@@ -49,7 +42,6 @@ function AccordianMenu() {
       try {
         const res = await fetch("/api/popular_brands");
         const brands = await res.json();
-        // console.log(brands);
         setPopularBrands(brands);
       } catch (e) {
         console.warn(`Couldnt fetch popular brands`, e);
@@ -100,7 +92,6 @@ function Category({ id, category, currentlySelected, onClick }) {
       try {
         const res = await fetch(`/api/subcategories/${id}`);
         const subcategories = await res.json();
-        // console.log(subcategories);
         setSubcategories(subcategories);
       } catch (e) {
         console.warn(`Couldnt fetch popular subcategories`, e);

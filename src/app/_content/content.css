@@ -1,63 +1,15 @@
-#accordianMenu {
-  @apply pl-3;
-  .children > button {
-    @apply ml-4;
-  }
-  .accordion {
-    @apply w-full block;
-    padding-right: 1em;
+#accordianMenu{padding-left:.75rem}.children>button{margin-left:.25rem}.accordion{width:100%;display:block;padding-right:1em}.accordion.has-children:after{content:"↓";font-size:1.1em;color:yellow;float:right;margin-right:-1rem}.accordion.active:after{content:"-"}
 
-    &.has-children {
-      &:after {
-        content: "↓";
-        font-size: 1.1em;
-        color: yellow;
-        float: right;
-        margin-right: -1rem;
-      }
-      &.active:after {
-        content: "-";
-      }
-    }
-  }
-}
+#categories{background-color:rgba(31,41,55,.75);color:#fff;box-shadow:0 0 .5rem rgba(0,0,0,.2);display:flex;flex-direction:column;text-align:center;padding-left:.5rem;border-radius:.375rem}.theWordCategories{font-weight:700}
 
-#categories {
-  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
-  @apply flex flex-col text-center pl-2;
+#categoriesList div,button{text-align:left}
 
-  .theWordCategories {
-    @apply font-bold;
-  }
-}
+#popularBrands{background-color:rgba(31,41,55,.75);color:#fff;box-shadow:0 0 .5rem rgba(0,0,0,.2);display:flex;flex-direction:column;text-align:center;margin-top:.375rem;margin-bottom:1.5rem;padding-left:.5rem;border-radius:.375rem}.popularBrands{font-weight:700}
 
-#categoriesList div,
-button {
-  @apply text-left;
-}
+#brandsList{display:flex;flex-wrap:wrap;flex-direction:column}
 
-#popularBrands {
-  @apply bg-gray-800 bg-opacity-75 text-white shadow-xl md:shadow-xl rounded-lg;
-  @apply flex flex-col text-center mt-6 mb-24 pl-2;
+#brandsList button{text-align:left}
 
-  .popularBrands {
-    @apply font-bold;
-  }
-}
+#item{display:flex;align-items:center;justify-content:center}
 
-#brandsList {
-  @apply flex flex-wrap flex-col;
-}
-
-#brandsList button {
-  @apply text-left;
-}
-
-#item {
-  @apply flex items-center justify-center;
-}
-
-.brand,
-.accordion {
-  @apply hover:text-yellow-500;
-}
+.brand,.accordion:hover{color:#f59e0b}
