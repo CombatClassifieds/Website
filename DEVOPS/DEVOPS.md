@@ -88,6 +88,13 @@ Will my server maximize its resources?
 
 ## [Anthony](https://github.com/anthonymeadows) 
 
+Throughout this attemt to optimize my application, i will trry multiple different routes. I have narrowed down my options in the image below. 
+<details>
+<summary>Click to view image</summary>
+
+![Image 1](options.png)
+</details>
+
 As you can see from the images below, our website took 12.12 seconds to load at url path `/items/1` on first attempt.
 
 <details>
